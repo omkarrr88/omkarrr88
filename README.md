@@ -23,7 +23,7 @@
 - 🚀 Vice Chairperson of **CSI TERNA Committee** at my college
 - 💻 All of my projects are available at **[omkar-kadam.vercel.app](http://omkar-kadam.vercel.app/)**
 - 📫 Reach me at **omkarkadam181188@gmail.com**
-- 📄 Know about my experiences **[View Resume](https://drive.google.com/file/d/15-I_8nTzdLquwk4MPWa0ilm1JAqYwXyM/view?usp=sharing)**
+- 📄 Know about my experiences **[View Resume](https://drive.google.com/file/d/1KHNiHUPrne6YRXO7bAJZQq5sLhrCWc8O/view?usp=sharing)**
 
 ---
 
