@@ -18,8 +18,6 @@
 
 ## 👨‍💻 About Me
 
-<img align="right" width="230" src="https://omkar-kadam.vercel.app/images/mypicnbg.webp" alt="Omkar Kadam" />
-
 I'm an **IT Engineer** (BE, Terna Engineering College — Mumbai University, 2026) working as a **Platform Engineer at Riamona Luxury & Fashion Brands**, where I build full-stack products end to end — the code, the tests, the CI/CD, and running them in production.
 
 - 🔭 **Currently building:** internal SaaS products with React, Node.js, Python, Prisma & PostgreSQL
