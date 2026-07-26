@@ -32,16 +32,16 @@ ROW_STEP = CHIP_H + CHIP_GAP
 GROUP_SPACING = 16         # gap above/below each divider
 
 
-def chip_width(name: str) -> float:
-    """pad(8) + icon(18) + gap(6) + text + pad(10)."""
-    return 42 + text_width(name, 13.5)
+def chip_width(name: str, has_icon: bool = True) -> float:
+    """pad(8) + icon(18) + gap(6) + text + pad(10); text-only chips skip the icon."""
+    return (42 if has_icon else 20) + text_width(name, 13.5)
 
 
 def render_chip(name: str, icon_key: str, display_hex: str, accent: str, x: float, y: float) -> str:
-    icon = ICONS.get(icon_key, {})
+    icon = ICONS.get(icon_key, {}) if icon_key else {}
     icon_d = icon.get("d", "")
     icon_hex = display_hex or icon.get("hex", "999999")
-    w = chip_width(name)
+    w = chip_width(name, has_icon=bool(icon_d))
 
     svg = (
         f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{CHIP_H}" rx="14" '
@@ -52,8 +52,9 @@ def render_chip(name: str, icon_key: str, display_hex: str, accent: str, x: floa
             f'<g transform="translate({x + 8:.1f},{y + 5:.1f}) scale(0.75)">'
             f'<path d="{icon_d}" fill="#{icon_hex}"/></g>'
         )
+    text_x = x + (32 if icon_d else 10)
     svg += (
-        f'<text x="{x + 32:.1f}" y="{y + 19:.1f}" font-family="{FONT}" font-size="13.5" '
+        f'<text x="{text_x:.1f}" y="{y + 19:.1f}" font-family="{FONT}" font-size="13.5" '
         f'fill="{PALETTE["text"]}">{esc(name)}</text>'
     )
     return svg
@@ -65,7 +66,7 @@ def wrap_rows(chips: List[Tuple[str, str, str]]) -> List[List[Tuple[str, str, st
     row: List[Tuple[str, str, str]] = []
     x = CHIP_X0
     for chip in chips:
-        w = chip_width(chip[0])
+        w = chip_width(chip[0], has_icon=bool(chip[1] and ICONS.get(chip[1], {}).get("d")))
         if row and x + w > CHIP_MAX_X:
             rows.append(row)
             row = [chip]
@@ -106,6 +107,15 @@ def generate_tech(out_path: str, mock: bool = True) -> None:
             ("Flask", "flask", ICONS.get("flask", {}).get("display_hex", "")),
             ("FastAPI", "fastapi", ""),
             ("GraphQL", "graphql", ""),
+            ("REST", None, ""),
+            ("WebSockets", None, ""),
+            ("JWT", "jsonwebtokens", ICONS.get("jsonwebtokens", {}).get("display_hex", "")),
+            ("OAuth", None, ""),
+        ],
+        "AI Engineering": [
+            ("RAG", None, ""),
+            ("LLM APIs", None, ""),
+            ("MCP", "anthropic", ""),
         ],
         "ML & Data": [
             ("PyTorch", "pytorch", ""),
@@ -115,25 +125,37 @@ def generate_tech(out_path: str, mock: bool = True) -> None:
             ("Pandas", "pandas", ICONS.get("pandas", {}).get("display_hex", "")),
             ("NumPy", "numpy", ICONS.get("numpy", {}).get("display_hex", "")),
         ],
-        "Databases & Cloud": [
+        "Databases": [
             ("PostgreSQL", "postgresql", ""),
             ("MySQL", "mysql", ""),
             ("MongoDB", "mongodb", ""),
             ("Prisma", "prisma", ICONS.get("prisma", {}).get("display_hex", "")),
             ("Supabase", "supabase", ""),
             ("Redis", "redis", ""),
+        ],
+        "Cloud & DevOps": [
             ("Docker", "docker", ""),
-            ("Railway", "railway", ICONS.get("railway", {}).get("display_hex", "")),
+            ("AWS", "amazonwebservices", ICONS.get("amazonwebservices", {}).get("display_hex", "")),
             ("Google Cloud", "googlecloud", ""),
+            ("Railway", "railway", ICONS.get("railway", {}).get("display_hex", "")),
+            ("GitHub Actions", "githubactions", ""),
             ("Git", "git", ""),
+        ],
+        "Testing & Monitoring": [
+            ("Vitest", "vitest", ""),
+            ("Playwright", "playwright", ""),
+            ("Sentry", "sentry", ICONS.get("sentry", {}).get("display_hex", "")),
         ],
     }
     group_accents = {
         "Languages": PALETTE["blue"],
         "Frontend": PALETTE["cyan"],
         "Backend & APIs": PALETTE["purple"],
+        "AI Engineering": PALETTE["red"],
         "ML & Data": PALETTE["orange"],
-        "Databases & Cloud": PALETTE["teal"],
+        "Databases": PALETTE["teal"],
+        "Cloud & DevOps": PALETTE["green"],
+        "Testing & Monitoring": PALETTE["cyan"],
     }
 
     body = ""
@@ -177,7 +199,7 @@ def generate_tech(out_path: str, mock: bool = True) -> None:
             x = CHIP_X0
             for name, icon_key, display_hex in row:
                 body += "\n" + render_chip(name, icon_key, display_hex, accent, x, ry)
-                x += chip_width(name) + CHIP_GAP
+                x += chip_width(name, has_icon=bool(icon_key and ICONS.get(icon_key, {}).get("d"))) + CHIP_GAP
             ry += ROW_STEP
         body += "\n</g>"
 

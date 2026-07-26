@@ -92,7 +92,7 @@ I'm an **IT Engineer** (BE, Terna Engineering College — Mumbai University, 202
 <h2 align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-snake.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/section-snake.svg"><img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-snake.svg" alt="Contribution Snake"></picture></h2>
 
 <p align="center">
-  <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/output/github-contribution-grid-snake-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/output/github-contribution-grid-snake.svg"><img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/output/github-contribution-grid-snake-dark.svg" alt="Contribution snake animation"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/snake.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/snake.svg"><img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/snake.svg" alt="Animated snake eating my contribution graph"></picture>
 </p>
 
 ---
