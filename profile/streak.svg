@@ -18,10 +18,10 @@
 <path d="M12 2c0 0 1 3 1 5 0 2-1 4-1 6 0 4 2 6 2 8 0 2-1 3-2 4 0 1-1 2-2 2s-2-1-2-2c-1-1-2-2-2-4 0-2 2-4 2-8 0-2-1-4-1-6 0-2 1-5 1-5h2z" fill="#7aa2f7" transform="translate(22,18)" width="24" height="24"/>
 <text x="54" y="30" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="16" font-weight="600" fill="#7aa2f7">Contribution Streak</text>
 </g>
-<text x="22" y="92" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="32" font-weight="700" fill="#7aa2f7">1.0k</text>
+<text x="22" y="92" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="32" font-weight="700" fill="#7aa2f7">1.5k</text>
 <text x="22" y="114" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="12" fill="#565f89">Total contributions</text>
 <text x="22" y="134" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89">Last year:</text>
-<text x="80" y="134" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="13" font-weight="600" fill="#c0caf5">225</text>
+<text x="80" y="134" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="13" font-weight="600" fill="#c0caf5">1.2k</text>
 <line x1="160" y1="72" x2="160" y2="180" stroke="#2f334d" stroke-width="1" opacity="0.5"/>
 <circle cx="226" cy="105" r="38" fill="none" stroke="#2f334d" stroke-width="1" opacity="0.2"/>
 <circle class="flame-ring" cx="226" cy="105" r="38" fill="none" stroke="#ff9e64" stroke-width="3" stroke-linecap="round"/>
