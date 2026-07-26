@@ -120,11 +120,12 @@ def generate_streak_svg(data: dict) -> str:
     # Big number
     svg += f'\n<text x="{x_col1}" y="{y_col1_num}" font-family="{FONT}" font-size="32" font-weight="700" fill="{PALETTE["blue"]}">{esc(format_number(total_contributions))}</text>'
 
-    # Subtitle 1: "Last year:"
-    svg += f'\n<text x="{x_col1}" y="{y_col1_num + 25}" font-family="{FONT}" font-size="11" fill="{PALETTE["muted"]}">Last year:</text>'
+    # Label under the big number (mirrors "Longest streak" on the right)
+    svg += f'\n<text x="{x_col1}" y="{y_col1_num + 22}" font-family="{FONT}" font-size="12" fill="{PALETTE["muted"]}">Total contributions</text>'
 
-    # Contributions this year
-    svg += f'\n<text x="{x_col1}" y="{y_col1_num + 40}" font-family="{FONT}" font-size="13" font-weight="600" fill="{PALETTE["text"]}">{esc(format_number(contributions_year))}</text>'
+    # Contributions this year (two positioned texts — no tspan reliance)
+    svg += f'\n<text x="{x_col1}" y="{y_col1_num + 42}" font-family="{FONT}" font-size="11" fill="{PALETTE["muted"]}">Last year:</text>'
+    svg += f'\n<text x="{x_col1 + 58}" y="{y_col1_num + 42}" font-family="{FONT}" font-size="13" font-weight="600" fill="{PALETTE["text"]}">{esc(format_number(contributions_year))}</text>'
 
     # Divider 1 (vertical line)
     svg += f'\n<line x1="160" y1="72" x2="160" y2="180" stroke="{PALETTE["border"]}" stroke-width="1" opacity="0.5"/>'

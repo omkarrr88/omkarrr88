@@ -40,7 +40,9 @@ def wrap_text(text: str, max_width: int = 62, font_size: float = 12.5) -> List[s
     if current_line:
         lines.append(" ".join(current_line))
 
-    return lines[:2]  # Max 2 lines
+    if len(lines) > 2:  # truncate with ellipsis rather than cutting silently
+        lines = [lines[0], lines[1].rstrip(".,;") + "…"]
+    return lines
 
 
 def render_tech_chips(
@@ -119,19 +121,15 @@ def generate_project_card(
     svg_content = card_frame(width, height)
 
     # CSS animations
+    # Opacity-only: transform keyframes would override the transform
+    # attributes that position the mini chip icons (collapsing them to 0,0).
     css = """
-@keyframes fadeInUp {
-  from {
-    transform: translateY(6px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 g {
-  animation: fadeInUp 0.6s ease-out forwards;
+  animation: fadeIn 0.6s ease-out forwards;
 }
 """
     svg_content += "\n" + styles(css)
@@ -202,14 +200,14 @@ def generate_all_projects(base_out_dir: str = "profile", mock: bool = True) -> N
         (
             "smart-puc",
             "Smart PUC",
-            "Blockchain vehicle-emission monitoring &mdash; signed OBD telemetry, on-chain records, ML fraud detection, NFT certificates.",
+            "Blockchain vehicle-emission monitoring with signed OBD telemetry, on-chain records and NFT certificates.",
             [("Solidity", "solidity", False), ("FastAPI", "fastapi", False), ("Web3.py", "python", True)],
             "bb9af7",  # purple
         ),
         (
             "v2v",
             "V2V Communication",
-            "Vehicle-to-vehicle blind-spot detection &amp; accident prevention. Now a paper under review at Discover IoT (Springer Nature).",
+            "Vehicle-to-vehicle blind-spot detection and accident prevention. Paper under review at Springer Nature.",
             [("Python", "python", False), ("IoT", "python", True), ("Simulation", "python", True)],
             "73daca",  # teal
         ),
@@ -230,7 +228,7 @@ def generate_all_projects(base_out_dir: str = "profile", mock: bool = True) -> N
         (
             "fitness-tracker",
             "Fitness Tracker",
-            "Diet, sleep &amp; workout logging with BMI calculator and Chart.js progress analytics.",
+            "Diet, sleep and workout logging with BMI calculator and Chart.js progress analytics.",
             [("JavaScript", "javascript", False), ("Chart.js", "javascript", True), ("HTML5", "javascript", True)],
             "7dcfff",  # cyan
         ),

@@ -9,7 +9,7 @@
 
 <p align="center">
   <a href="https://omkar-kadam.vercel.app">
-    <img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/header.svg" alt="Omkar Kadam — Platform Engineer" />
+    <img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/header.svg" alt="Omkar Kadam — Full Stack Engineer" />
   </a>
 </p>
 
@@ -17,7 +17,7 @@
 
 ## 👨‍💻 About Me
 
-I'm an **IT Engineer** (BE, Terna Engineering College — Mumbai University, 2026) working as a **Platform Engineer at Riamona Luxury & Fashion Brands**, where I build full-stack products end to end — the code, the tests, the CI/CD, and running them in production.
+I'm an **IT Engineer** (BE, Terna Engineering College — Mumbai University, 2026) working as a **Full Stack Engineer at Riamona Luxury & Fashion Brands**, where I build full-stack products end to end — the code, the tests, the CI/CD, and running them in production.
 
 - 🔭 **Currently building:** internal SaaS products with React, Node.js, Python, Prisma & PostgreSQL
 - 🏆 **7th out of 31,000+ teams** at the **Meta PyTorch Hackathon** — built *Chakravyuh*, a multi-agent RL environment for UPI fraud detection

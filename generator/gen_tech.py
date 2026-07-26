@@ -152,12 +152,6 @@ def generate_tech(out_path: str, mock: bool = True) -> None:
             ("Google Cloud", "googlecloud", "4285F4"),
             ("Git", "git", "F1502F"),
         ],
-        "AI Tools": [
-            ("Claude", "anthropic", "7AA2F7"),
-            ("ChatGPT", "openai", "10A37F"),
-            ("Gemini", "googlegemini", "4285F4"),
-            ("Copilot", "githubcopilot", "000000"),
-        ],
     }
 
     width = 920
@@ -166,43 +160,29 @@ def generate_tech(out_path: str, mock: bool = True) -> None:
     padding_x = 22
     padding_y = 22
 
-    # Calculate total height
-    total_height = padding_y  # top padding
-    total_height += 30  # title
-    total_height += group_gap
-
+    # Calculate total height — must mirror the render loop below exactly:
+    # render starts at y=80; each group adds 18+section_gap for its label,
+    # 32 per chip row, then (group_gap - section_gap) between groups.
+    total_height = 80
     for group_name, chips in tech_groups.items():
-        total_height += 18  # group label
-        total_height += section_gap
-
-        # Calculate rows for this group
-        max_row_width = width - padding_x * 2
-        rows = wrap_chips(chips, max_row_width)
-
-        # Each chip row is ~32px (24px chip + 8px gap)
-        total_height += len(rows) * 32
-
-        total_height += group_gap
-
+        rows = wrap_chips(chips, width - padding_x * 2)
+        total_height += 18 + section_gap + len(rows) * 32 + (group_gap - section_gap)
+    total_height -= group_gap - section_gap  # no gap after the last group
     total_height += padding_y  # bottom padding
 
     # Create SVG
     svg_content = card_frame(width, total_height)
 
     # Add CSS for animations
+    # Opacity-only animation: CSS transform keyframes would OVERRIDE the
+    # transform attributes that position the icons (collapsing them to 0,0).
     css = """
-@keyframes fadeInUp {
-  from {
-    transform: translateY(6px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 g {
-  animation: fadeInUp 0.6s ease-out forwards;
+  animation: fadeIn 0.6s ease-out forwards;
 }
 """
     for i in range(30):  # Support up to 30 groups/rows

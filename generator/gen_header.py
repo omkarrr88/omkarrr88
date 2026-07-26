@@ -13,6 +13,8 @@ import os
 import xml.dom.minidom
 from datetime import datetime
 
+from theme import esc
+
 def render(data: dict, out_path: str) -> None:
     """
     Render header SVG (orchestrator interface).
@@ -47,10 +49,11 @@ def generate_header(out_path: str, mock: bool = True, include_animations: bool =
     width, height = 920, 160
 
     # Typing phrases (4 phrases, ~3s each + 1.2s pause per phrase)
+    # Plain characters only — esc() is applied at render time.
     phrases = [
-        "Platform Engineer @ Riamona",
-        "Full-Stack Developer - React | Node | Python",
-        "ML Enthusiast &amp; Automation Builder",
+        "Full Stack Engineer @ Riamona",
+        "React | Node | Python | PostgreSQL",
+        "ML Enthusiast & Automation Builder",
         "IT Engineer - Mumbai University '26"
     ]
 
@@ -150,37 +153,41 @@ def generate_header(out_path: str, mock: bool = True, include_animations: bool =
     svg_parts.append(f'<text x="18" y="48" font-family="{MONO}" font-size="20" font-weight="400" fill="{border}" opacity="0.6">&lt;/&gt;</text>')
     svg_parts.append(f'<text x="{width - 48}" y="48" font-family="{MONO}" font-size="20" font-weight="400" fill="{border}" opacity="0.6">{{}}</text>')
 
+    # Everything centered on the card's vertical axis
+    cx = width // 2
+
     # Main name headline "Omkar Kadam"
-    svg_parts.append(f'<text x="65" y="50" font-family="{FONT}" font-size="32" font-weight="700" fill="{blue}">Omkar Kadam</text>')
+    svg_parts.append(f'<text x="{cx}" y="50" text-anchor="middle" font-family="{FONT}" font-size="32" font-weight="700" fill="{blue}">Omkar Kadam</text>')
 
-    # Gradient underline under name
-    svg_parts.append(f'<rect x="65" y="58" width="280" height="3" fill="url(#nameGradient)" rx="1.5"/>')
+    # Gradient underline under name (centered)
+    svg_parts.append(f'<rect x="{cx - 140}" y="58" width="280" height="3" fill="url(#nameGradient)" rx="1.5"/>')
 
-    # Typing animation container
-    svg_parts.append(f'<g class="typing-container">')
-
-    # Phrases with typing animation
+    # Phrases with typing animation. Each phrase lives in its own <g> whose
+    # opacity is animated by its class; the cursor sits inside the group so it
+    # appears right after that phrase's text and blinks independently.
+    # NOTE: inline style only sets the initial state — CSS animations override
+    # inline declarations, but "animation: none" inline would NOT be
+    # overridable by class rules (that bug froze the cycle on phrase 0).
+    mono_char_w = 7.8  # approx advance width of 13px monospace
     if include_animations:
-        # Include all phrases for animation cycling
         for i, phrase in enumerate(phrases):
             initial_opacity = "1" if i == 0 else "0"
-            svg_parts.append(f'<text x="65" y="105" font-family="{MONO}" font-size="13" font-weight="400" fill="{cyan}" class="phrase-{i}" style="opacity: {initial_opacity}; animation: none;">{phrase}</text>')
+            half_w = len(phrase) * mono_char_w / 2
+            cursor_x = cx + half_w + 6
+            svg_parts.append(f'<g class="phrase-{i}" style="opacity: {initial_opacity};">')
+            svg_parts.append(f'<text x="{cx}" y="105" text-anchor="middle" font-family="{MONO}" font-size="13" font-weight="400" fill="{cyan}">{esc(phrase)}</text>')
+            svg_parts.append(f'<rect x="{cursor_x:.0f}" y="92" width="2.5" height="17" fill="{blue}" class="cursor"/>')
+            svg_parts.append('</g>')
     else:
         # Static rendering: only show first phrase
-        svg_parts.append(f'<text x="65" y="105" font-family="{MONO}" font-size="13" font-weight="400" fill="{cyan}">{phrases[0]}</text>')
+        svg_parts.append(f'<text x="{cx}" y="105" text-anchor="middle" font-family="{MONO}" font-size="13" font-weight="400" fill="{cyan}">{esc(phrases[0])}</text>')
 
-    # Blinking cursor
-    svg_parts.append(f'<rect x="580" y="90" width="2.5" height="18" fill="{blue}" class="cursor"/>')
-
-    svg_parts.append('</g>')
-
-    # Bottom section: Location and availability badge
-    # Green pulse dot for "available"
-    svg_parts.append(f'<circle cx="65" cy="135" r="3.5" fill="{green}" class="pulse-dot"/>')
-    svg_parts.append(f'<text x="75" y="140" font-family="{FONT}" font-size="11" font-weight="500" fill="{text_muted_readable}">Available for work</text>')
-
-    # Location
-    svg_parts.append(f'<text x="65" y="155" font-family="{FONT}" font-size="11" font-weight="400" fill="{text_muted_readable}">📍 Navi Mumbai, India</text>')
+    # Bottom meta line, centered: pulsing green dot + availability + location.
+    # Separate positioned elements — no tspan advance-width reliance.
+    svg_parts.append(f'<circle cx="{cx - 132}" cy="136" r="3.5" fill="{green}" class="pulse-dot"/>')
+    svg_parts.append(f'<text x="{cx - 122}" y="140" font-family="{FONT}" font-size="11" font-weight="500" fill="{text_muted_readable}">Available for work</text>')
+    svg_parts.append(f'<line x1="{cx - 10}" y1="128" x2="{cx - 10}" y2="140" stroke="{border}" stroke-width="1"/>')
+    svg_parts.append(f'<text x="{cx + 2}" y="140" font-family="{FONT}" font-size="11" font-weight="400" fill="{text_muted_readable}">📍 Navi Mumbai, India</text>')
 
     svg_parts.append('</svg>')
 
