@@ -121,14 +121,14 @@
   <polygon points="160.9,207.6 173.9,207.6 170.0,209.9 157.0,209.9" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-172">
-  <polygon points="172.0,210.0 185.0,210.0 188.9,196.8 175.9,196.8" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="185.0,210.0 188.9,207.7 188.9,196.8 185.0,199.2" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="175.9,196.8 188.9,196.8 185.0,199.2 172.0,199.2" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="172.0,210.0 185.0,210.0 188.9,199.0 175.9,199.0" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="185.0,210.0 188.9,207.7 188.9,199.0 185.0,201.4" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="175.9,199.0 188.9,199.0 185.0,201.4 172.0,201.4" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-187">
-  <polygon points="187.0,210.0 200.0,210.0 203.9,206.1 190.9,206.1" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="200.0,210.0 203.9,207.7 203.9,206.1 200.0,208.5" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="190.9,206.1 203.9,206.1 200.0,208.5 187.0,208.5" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="187.0,210.0 200.0,210.0 203.9,206.8 190.9,206.8" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="200.0,210.0 203.9,207.7 203.9,206.8 200.0,209.1" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="190.9,206.8 203.9,206.8 200.0,209.1 187.0,209.1" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-202">
   <polygon points="202.0,210.0 215.0,210.0 218.9,207.6 205.9,207.6" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
@@ -151,14 +151,14 @@
   <polygon points="250.9,207.6 263.9,207.6 260.0,209.9 247.0,209.9" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-262">
-  <polygon points="262.0,210.0 275.0,210.0 278.9,203.8 265.9,203.8" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="275.0,210.0 278.9,207.7 278.9,203.8 275.0,206.1" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="265.9,203.8 278.9,203.8 275.0,206.1 262.0,206.1" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="262.0,210.0 275.0,210.0 278.9,204.8 265.9,204.8" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="275.0,210.0 278.9,207.7 278.9,204.8 275.0,207.2" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="265.9,204.8 278.9,204.8 275.0,207.2 262.0,207.2" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-277">
-  <polygon points="277.0,210.0 290.0,210.0 293.9,199.2 280.9,199.2" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="290.0,210.0 293.9,207.7 293.9,199.2 290.0,201.5" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="280.9,199.2 293.9,199.2 290.0,201.5 277.0,201.5" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="277.0,210.0 290.0,210.0 293.9,201.0 280.9,201.0" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="290.0,210.0 293.9,207.7 293.9,201.0 290.0,203.3" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="280.9,201.0 293.9,201.0 290.0,203.3 277.0,203.3" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-292">
   <polygon points="292.0,210.0 305.0,210.0 308.9,207.6 295.9,207.6" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
@@ -176,9 +176,9 @@
   <polygon points="325.9,207.6 338.9,207.6 335.0,209.9 322.0,209.9" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-337">
-  <polygon points="337.0,210.0 350.0,210.0 353.9,199.2 340.9,199.2" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="350.0,210.0 353.9,207.7 353.9,199.2 350.0,201.5" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="340.9,199.2 353.9,199.2 350.0,201.5 337.0,201.5" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="337.0,210.0 350.0,210.0 353.9,201.0 340.9,201.0" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="350.0,210.0 353.9,207.7 353.9,201.0 350.0,203.3" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="340.9,201.0 353.9,201.0 350.0,203.3 337.0,203.3" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-352">
   <polygon points="352.0,210.0 365.0,210.0 368.9,207.6 355.9,207.6" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
@@ -196,80 +196,79 @@
   <polygon points="385.9,207.6 398.9,207.6 395.0,209.9 382.0,209.9" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-397">
-  <polygon points="397.0,210.0 410.0,210.0 413.9,166.6 400.9,166.6" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="410.0,210.0 413.9,207.7 413.9,166.6 410.0,169.0" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="400.9,166.6 413.9,166.6 410.0,169.0 397.0,169.0" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="397.0,210.0 410.0,210.0 413.9,173.9 400.9,173.9" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="410.0,210.0 413.9,207.7 413.9,173.9 410.0,176.2" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="400.9,173.9 413.9,173.9 410.0,176.2 397.0,176.2" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-412">
-  <text x="418.5" y="82.0" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" font-weight="600" fill="#ff9e64" text-anchor="middle">155</text>
-  <polygon points="412.0,210.0 425.0,210.0 428.9,90.0 415.9,90.0" fill="#ff9e64" stroke="#2f334d" stroke-width="0.5" opacity="0.9"/>
-  <polygon points="425.0,210.0 428.9,207.7 428.9,90.0 425.0,92.3" fill="#ba7651" stroke="#2f334d" stroke-width="0.5" opacity="0.85"/>
-  <polygon points="415.9,90.0 428.9,90.0 425.0,92.3 412.0,92.3" fill="#ffc4a2" stroke="#2f334d" stroke-width="0.5" opacity="0.95"/>
+  <polygon points="412.0,210.0 425.0,210.0 428.9,101.6 415.9,101.6" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="425.0,210.0 428.9,207.7 428.9,101.6 425.0,104.0" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="415.9,101.6 428.9,101.6 425.0,104.0 412.0,104.0" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-427">
-  <polygon points="427.0,210.0 440.0,210.0 443.9,141.9 430.9,141.9" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="440.0,210.0 443.9,207.7 443.9,141.9 440.0,144.2" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="430.9,141.9 443.9,141.9 440.0,144.2 427.0,144.2" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="427.0,210.0 440.0,210.0 443.9,152.6 430.9,152.6" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="440.0,210.0 443.9,207.7 443.9,152.6 440.0,154.9" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="430.9,152.6 443.9,152.6 440.0,154.9 427.0,154.9" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-442">
-  <polygon points="442.0,210.0 455.0,210.0 458.9,142.6 445.9,142.6" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="455.0,210.0 458.9,207.7 458.9,142.6 455.0,145.0" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="445.9,142.6 458.9,142.6 455.0,145.0 442.0,145.0" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="442.0,210.0 455.0,210.0 458.9,153.9 445.9,153.9" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="455.0,210.0 458.9,207.7 458.9,153.9 455.0,156.2" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="445.9,153.9 458.9,153.9 455.0,156.2 442.0,156.2" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-457">
-  <polygon points="457.0,210.0 470.0,210.0 473.9,189.9 460.9,189.9" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="470.0,210.0 473.9,207.7 473.9,189.9 470.0,192.2" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="460.9,189.9 473.9,189.9 470.0,192.2 457.0,192.2" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="457.0,210.0 470.0,210.0 473.9,193.2 460.9,193.2" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="470.0,210.0 473.9,207.7 473.9,193.2 470.0,195.6" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="460.9,193.2 473.9,193.2 470.0,195.6 457.0,195.6" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-472">
-  <polygon points="472.0,210.0 485.0,210.0 488.9,189.9 475.9,189.9" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="485.0,210.0 488.9,207.7 488.9,189.9 485.0,192.2" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="475.9,189.9 488.9,189.9 485.0,192.2 472.0,192.2" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="472.0,210.0 485.0,210.0 488.9,193.2 475.9,193.2" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="485.0,210.0 488.9,207.7 488.9,193.2 485.0,195.6" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="475.9,193.2 488.9,193.2 485.0,195.6 472.0,195.6" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-487">
-  <polygon points="487.0,210.0 500.0,210.0 503.9,146.5 490.9,146.5" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="500.0,210.0 503.9,207.7 503.9,146.5 500.0,148.9" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="490.9,146.5 503.9,146.5 500.0,148.9 487.0,148.9" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="487.0,210.0 500.0,210.0 503.9,157.1 490.9,157.1" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="500.0,210.0 503.9,207.7 503.9,157.1 500.0,159.4" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="490.9,157.1 503.9,157.1 500.0,159.4 487.0,159.4" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-502">
-  <polygon points="502.0,210.0 515.0,210.0 518.9,180.6 505.9,180.6" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="515.0,210.0 518.9,207.7 518.9,180.6 515.0,182.9" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="505.9,180.6 518.9,180.6 515.0,182.9 502.0,182.9" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="502.0,210.0 515.0,210.0 518.9,185.5 505.9,185.5" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="515.0,210.0 518.9,207.7 518.9,185.5 515.0,187.8" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="505.9,185.5 518.9,185.5 515.0,187.8 502.0,187.8" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-517">
-  <polygon points="517.0,210.0 530.0,210.0 533.9,159.7 520.9,159.7" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="530.0,210.0 533.9,207.7 533.9,159.7 530.0,162.0" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="520.9,159.7 533.9,159.7 530.0,162.0 517.0,162.0" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="517.0,210.0 530.0,210.0 533.9,168.1 520.9,168.1" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="530.0,210.0 533.9,207.7 533.9,168.1 530.0,170.4" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="520.9,168.1 533.9,168.1 530.0,170.4 517.0,170.4" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-532">
-  <polygon points="532.0,210.0 545.0,210.0 548.9,172.1 535.9,172.1" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="545.0,210.0 548.9,207.7 548.9,172.1 545.0,174.4" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="535.9,172.1 548.9,172.1 545.0,174.4 532.0,174.4" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="532.0,210.0 545.0,210.0 548.9,178.4 535.9,178.4" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="545.0,210.0 548.9,207.7 548.9,178.4 545.0,180.7" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="535.9,178.4 548.9,178.4 545.0,180.7 532.0,180.7" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-547">
-  <polygon points="547.0,210.0 560.0,210.0 563.9,172.8 550.9,172.8" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="560.0,210.0 563.9,207.7 563.9,172.8 560.0,175.2" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="550.9,172.8 563.9,172.8 560.0,175.2 547.0,175.2" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="547.0,210.0 560.0,210.0 563.9,179.0 550.9,179.0" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="560.0,210.0 563.9,207.7 563.9,179.0 560.0,181.4" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="550.9,179.0 563.9,179.0 560.0,181.4 547.0,181.4" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-562">
-  <polygon points="562.0,210.0 575.0,210.0 578.9,203.0 565.9,203.0" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="575.0,210.0 578.9,207.7 578.9,203.0 575.0,205.4" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="565.9,203.0 578.9,203.0 575.0,205.4 562.0,205.4" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="562.0,210.0 575.0,210.0 578.9,204.2 565.9,204.2" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="575.0,210.0 578.9,207.7 578.9,204.2 575.0,206.5" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="565.9,204.2 578.9,204.2 575.0,206.5 562.0,206.5" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-577">
-  <polygon points="577.0,210.0 590.0,210.0 593.9,204.6 580.9,204.6" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="590.0,210.0 593.9,207.7 593.9,204.6 590.0,206.9" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="580.9,204.6 593.9,204.6 590.0,206.9 577.0,206.9" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="577.0,210.0 590.0,210.0 593.9,205.5 580.9,205.5" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="590.0,210.0 593.9,207.7 593.9,205.5 590.0,207.8" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="580.9,205.5 593.9,205.5 590.0,207.8 577.0,207.8" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-592">
-  <polygon points="592.0,210.0 605.0,210.0 608.9,193.7 595.9,193.7" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="605.0,210.0 608.9,207.7 608.9,193.7 605.0,196.1" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="595.9,193.7 608.9,193.7 605.0,196.1 592.0,196.1" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="592.0,210.0 605.0,210.0 608.9,196.5 595.9,196.5" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="605.0,210.0 608.9,207.7 608.9,196.5 605.0,198.8" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="595.9,196.5 608.9,196.5 605.0,198.8 592.0,198.8" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-607">
-  <polygon points="607.0,210.0 620.0,210.0 623.9,207.6 610.9,207.6" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="620.0,210.0 623.9,207.7 623.9,207.6 620.0,209.9" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="610.9,207.6 623.9,207.6 620.0,209.9 607.0,209.9" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="607.0,210.0 620.0,210.0 623.9,175.2 610.9,175.2" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="620.0,210.0 623.9,207.7 623.9,175.2 620.0,177.5" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="610.9,175.2 623.9,175.2 620.0,177.5 607.0,177.5" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-622">
   <polygon points="622.0,210.0 635.0,210.0 638.9,207.6 625.9,207.6" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
@@ -282,19 +281,19 @@
   <polygon points="640.9,207.6 653.9,207.6 650.0,209.9 637.0,209.9" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-652">
-  <polygon points="652.0,210.0 665.0,210.0 668.9,207.6 655.9,207.6" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="665.0,210.0 668.9,207.7 668.9,207.6 665.0,209.9" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="655.9,207.6 668.9,207.6 665.0,209.9 652.0,209.9" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="652.0,210.0 665.0,210.0 668.9,153.2 655.9,153.2" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="665.0,210.0 668.9,207.7 668.9,153.2 665.0,155.6" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="655.9,153.2 668.9,153.2 665.0,155.6 652.0,155.6" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-667">
-  <polygon points="667.0,210.0 680.0,210.0 683.9,207.6 670.9,207.6" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="680.0,210.0 683.9,207.7 683.9,207.6 680.0,209.9" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="670.9,207.6 683.9,207.6 680.0,209.9 667.0,209.9" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="667.0,210.0 680.0,210.0 683.9,143.5 670.9,143.5" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="680.0,210.0 683.9,207.7 683.9,143.5 680.0,145.9" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="670.9,143.5 683.9,143.5 680.0,145.9 667.0,145.9" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-682">
-  <polygon points="682.0,210.0 695.0,210.0 698.9,207.6 685.9,207.6" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="695.0,210.0 698.9,207.7 698.9,207.6 695.0,209.9" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="685.9,207.6 698.9,207.6 695.0,209.9 682.0,209.9" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="682.0,210.0 695.0,210.0 698.9,206.1 685.9,206.1" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="695.0,210.0 698.9,207.7 698.9,206.1 695.0,208.5" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="685.9,206.1 698.9,206.1 695.0,208.5 682.0,208.5" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-697">
   <polygon points="697.0,210.0 710.0,210.0 713.9,207.6 700.9,207.6" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
@@ -302,34 +301,35 @@
   <polygon points="700.9,207.6 713.9,207.6 710.0,209.9 697.0,209.9" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-712">
-  <polygon points="712.0,210.0 725.0,210.0 728.9,184.5 715.9,184.5" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="725.0,210.0 728.9,207.7 728.9,184.5 725.0,186.8" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="715.9,184.5 728.9,184.5 725.0,186.8 712.0,186.8" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="712.0,210.0 725.0,210.0 728.9,166.8 715.9,166.8" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="725.0,210.0 728.9,207.7 728.9,166.8 725.0,169.1" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="715.9,166.8 728.9,166.8 725.0,169.1 712.0,169.1" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-727">
-  <polygon points="727.0,210.0 740.0,210.0 743.9,193.0 730.9,193.0" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="740.0,210.0 743.9,207.7 743.9,193.0 740.0,195.3" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="730.9,193.0 743.9,193.0 740.0,195.3 727.0,195.3" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <text x="733.5" y="82.0" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" font-weight="600" fill="#ff9e64" text-anchor="middle">186</text>
+  <polygon points="727.0,210.0 740.0,210.0 743.9,90.0 730.9,90.0" fill="#ff9e64" stroke="#2f334d" stroke-width="0.5" opacity="0.9"/>
+  <polygon points="740.0,210.0 743.9,207.7 743.9,90.0 740.0,92.3" fill="#ba7651" stroke="#2f334d" stroke-width="0.5" opacity="0.85"/>
+  <polygon points="730.9,90.0 743.9,90.0 740.0,92.3 727.0,92.3" fill="#ffc4a2" stroke="#2f334d" stroke-width="0.5" opacity="0.95"/>
 </g>
 <g class="tower tower-742">
-  <polygon points="742.0,210.0 755.0,210.0 758.9,194.5 745.9,194.5" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="755.0,210.0 758.9,207.7 758.9,194.5 755.0,196.9" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="745.9,194.5 758.9,194.5 755.0,196.9 742.0,196.9" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="742.0,210.0 755.0,210.0 758.9,193.2 745.9,193.2" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="755.0,210.0 758.9,207.7 758.9,193.2 755.0,195.6" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="745.9,193.2 758.9,193.2 755.0,195.6 742.0,195.6" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-757">
-  <polygon points="757.0,210.0 770.0,210.0 773.9,191.4 760.9,191.4" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="770.0,210.0 773.9,207.7 773.9,191.4 770.0,193.8" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="760.9,191.4 773.9,191.4 770.0,193.8 757.0,193.8" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="757.0,210.0 770.0,210.0 773.9,194.5 760.9,194.5" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="770.0,210.0 773.9,207.7 773.9,194.5 770.0,196.9" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="760.9,194.5 773.9,194.5 770.0,196.9 757.0,196.9" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-772">
-  <polygon points="772.0,210.0 785.0,210.0 788.9,175.2 775.9,175.2" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="785.0,210.0 788.9,207.7 788.9,175.2 785.0,177.5" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="775.9,175.2 788.9,175.2 785.0,177.5 772.0,177.5" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="772.0,210.0 785.0,210.0 788.9,181.0 775.9,181.0" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="785.0,210.0 788.9,207.7 788.9,181.0 785.0,183.3" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="775.9,181.0 788.9,181.0 785.0,183.3 772.0,183.3" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-787">
-  <polygon points="787.0,210.0 800.0,210.0 803.9,206.9 790.9,206.9" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="800.0,210.0 803.9,207.7 803.9,206.9 800.0,209.2" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="790.9,206.9 803.9,206.9 800.0,209.2 787.0,209.2" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="787.0,210.0 800.0,210.0 803.9,206.8 790.9,206.8" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="800.0,210.0 803.9,207.7 803.9,206.8 800.0,209.1" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="790.9,206.8 803.9,206.8 800.0,209.1 787.0,209.1" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <line x1="22.0" y1="210.0" x2="800.0" y2="210.0" stroke="#2f334d" stroke-width="1"/>
 <text x="28.5" y="230" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle">Aug</text>
@@ -344,5 +344,5 @@
 <text x="613.5" y="230" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle">May</text>
 <text x="688.5" y="230" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle">Jun</text>
 <text x="748.5" y="230" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle">Jul</text>
-<text x="898" y="36" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="end">971 contributions · last 52 weeks</text>
+<text x="898" y="36" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="end">1,442 contributions · last 52 weeks</text>
 </svg>
