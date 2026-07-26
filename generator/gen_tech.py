@@ -12,13 +12,13 @@ import argparse
 import os
 import xml.dom.minidom
 from typing import List, Tuple, Dict, Any
-from theme import PALETTE, FONT, MONO, esc, card_frame, styles, title_row
+from theme import PALETTE, FONT, MONO, esc, card_frame, styles, text_width, title_row
 from icons import ICONS
 
 
 def measure_text_width(text: str, font_size: int = 13) -> float:
-    """Rough estimate of text width in pixels (monospace ~7.2px per char at size 13)."""
-    return len(text) * 7.2 * (font_size / 13)
+    """Estimate text width via the shared per-character table in theme."""
+    return text_width(text, font_size)
 
 
 def wrap_chips(

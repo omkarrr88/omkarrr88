@@ -166,3 +166,25 @@ g:nth-child(3) {
         f.write(svg_content)
 
     print(f"✓ Demo SVG written to {args.out}")
+
+def text_width(s: str, font_size: float) -> float:
+    """Per-character width estimate for the Segoe UI-ish system stack.
+
+    Em-width factors by glyph class; slightly generous so chip pills
+    never clip their labels.
+    """
+    narrow = set("iljft.,:;'|!")
+    wide = set("mwMW@")
+    total = 0.0
+    for ch in s:
+        if ch in narrow:
+            total += 0.32
+        elif ch in wide:
+            total += 0.92
+        elif ch.isupper() or ch.isdigit():
+            total += 0.68
+        elif ch == " ":
+            total += 0.34
+        else:
+            total += 0.56
+    return total * font_size

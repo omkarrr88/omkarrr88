@@ -194,19 +194,13 @@ def generate_svg(data: Dict[str, Any], output_path: str) -> None:
 
     # CSS animations - simplified for better compatibility
     css = """
-@keyframes fadeInUp {
-  from {
-    transform: translateY(6px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .chart-container {
-  animation: fadeInUp 0.6s ease-out forwards;
+  animation: fadeIn 0.6s ease-out forwards;
 }
 """
 

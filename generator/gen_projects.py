@@ -15,7 +15,7 @@ import argparse
 import os
 import xml.dom.minidom
 from typing import List, Tuple
-from theme import PALETTE, FONT, MONO, esc, card_frame, styles
+from theme import PALETTE, FONT, MONO, esc, card_frame, styles, text_width as theme_text_width
 from icons import ICONS
 
 
@@ -63,7 +63,7 @@ def render_tech_chips(
     for i, (name, icon_key, is_text) in enumerate(chips[:max_chips]):
         if is_text:
             # Text-only chip (no icon)
-            text_width = len(name) * 5.5 + padding * 2
+            text_width = theme_text_width(name, 11) + padding * 2
             svg += f'<rect x="{current_x}" y="{y}" width="{text_width}" height="{chip_height}" rx="9" fill="{PALETTE["bg_deep"]}" stroke="{PALETTE["border"]}" stroke-width="0.5"/>'
             text_x = current_x + padding
             text_y = y + 13
@@ -75,7 +75,7 @@ def render_tech_chips(
             icon_d = icon.get("d", "")
             icon_hex = icon.get("hex", "999999")
 
-            text_width = len(name) * 5.5 + 20  # icon (12px) + gap (2px) + text + padding
+            text_width = theme_text_width(name, 11) + 20  # icon (12px) + gap (2px) + text + padding
             chip_width = 12 + 2 + text_width + padding
 
             svg += f'<rect x="{current_x}" y="{y}" width="{chip_width}" height="{chip_height}" rx="9" fill="{PALETTE["bg_deep"]}" stroke="{PALETTE["border"]}" stroke-width="0.5"/>'
