@@ -18,21 +18,21 @@
 <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z" fill="#3d59a1" transform="translate(22,18)" width="24" height="24"/>
 <text x="54" y="30" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="16" font-weight="600" fill="#3d59a1">Weekly Rhythm</text>
 </g>
-<rect class="bar" style="animation-delay: 0ms" x="27.0" y="82.53218884120172" width="38" height="82.46781115879828" rx="3" fill="#3d59a1"/>
+<rect class="bar" style="animation-delay: 0ms" x="27.0" y="87.5625" width="38" height="77.4375" rx="3" fill="#3d59a1"/>
 <text x="46.0" y="185" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#6e7781" text-anchor="middle">M</text>
-<rect class="bar" style="animation-delay: 80ms" x="75.0" y="67.21030042918456" width="38" height="97.78969957081544" rx="3" fill="#3d59a1"/>
+<rect class="bar" style="animation-delay: 80ms" x="75.0" y="60.0" width="38" height="105.0" rx="3" fill="#b15c00"/>
 <text x="94.0" y="185" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#6e7781" text-anchor="middle">T</text>
-<rect class="bar" style="animation-delay: 160ms" x="123.0" y="60.0" width="38" height="105.0" rx="3" fill="#b15c00"/>
+<text x="94.0" y="52.0" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" font-weight="600" fill="#b15c00" text-anchor="middle">160</text>
+<rect class="bar" style="animation-delay: 160ms" x="123.0" y="81.65625" width="38" height="83.34375" rx="3" fill="#3d59a1"/>
 <text x="142.0" y="185" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#6e7781" text-anchor="middle">W</text>
-<text x="142.0" y="52.0" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" font-weight="600" fill="#b15c00" text-anchor="middle">233</text>
-<rect class="bar" style="animation-delay: 240ms" x="171.0" y="80.72961373390558" width="38" height="84.27038626609442" rx="3" fill="#3d59a1"/>
+<rect class="bar" style="animation-delay: 240ms" x="171.0" y="90.84375" width="38" height="74.15625" rx="3" fill="#3d59a1"/>
 <text x="190.0" y="185" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#6e7781" text-anchor="middle">T</text>
 <rect class="bar" style="animation-delay: 320ms" x="219.0" y="60.0" width="38" height="105.0" rx="3" fill="#3d59a1"/>
 <text x="238.0" y="185" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#6e7781" text-anchor="middle">F</text>
-<rect class="bar" style="animation-delay: 400ms" x="267.0" y="72.61802575107296" width="38" height="92.38197424892704" rx="3" fill="#3d59a1"/>
+<rect class="bar" style="animation-delay: 400ms" x="267.0" y="81.65625" width="38" height="83.34375" rx="3" fill="#3d59a1"/>
 <text x="286.0" y="185" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#6e7781" text-anchor="middle">S</text>
-<rect class="bar" style="animation-delay: 480ms" x="315.0" y="106.86695278969958" width="38" height="58.133047210300425" rx="3" fill="#3d59a1"/>
+<rect class="bar" style="animation-delay: 480ms" x="315.0" y="91.5" width="38" height="73.5" rx="3" fill="#3d59a1"/>
 <text x="334.0" y="185" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#6e7781" text-anchor="middle">S</text>
 <text x="22" y="200" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#6e7781">Most active: </text>
-<text x="90.64" y="200" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#b15c00">Wednesday</text>
+<text x="90.64" y="200" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#b15c00">Tuesday</text>
 </svg>

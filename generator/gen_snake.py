@@ -291,10 +291,11 @@ def generate_snake_svg(data: Dict[str, Any]) -> str:
             if total_path_length > 0:
                 pass_fraction = serpentine_idx / total_path_length
 
-                # Create keyTimes: [0, pass_fraction-0.02, pass_fraction, pass_fraction+0.02, 1]
-                # Values: [1, 1, 0.15, 1, 1]
-                key_times = [0, max(0, pass_fraction - 0.02), pass_fraction, min(1, pass_fraction + 0.02), 1]
-                values = [1, 1, 0.15, 1, 1]
+                # Eaten cells STAY dim until just before the loop restarts —
+                # a brief dip reads as a flicker, not as the snake eating.
+                pass_fraction = min(pass_fraction, 0.95)
+                key_times = [0, max(0.0, pass_fraction - 0.01), pass_fraction, 0.97, 1]
+                values = [1, 1, 0.15, 0.15, 1]
 
                 # Sort and deduplicate keyTimes/values
                 paired = list(zip(key_times, values))
