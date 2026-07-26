@@ -157,7 +157,14 @@ def generate_weekday_svg(data: dict) -> str:
 
         # Draw rounded bar (animation handles opacity)
         animation_delay = day * 80
-        svg += f'\n<rect class="bar" style="animation-delay: {animation_delay}ms" x="{bar_x}" y="{bar_top}" width="{bar_actual_width}" height="{bar_height}" rx="3" fill="{bar_color}"/>'
+        base_y = bar_top + bar_height
+        begin_s = animation_delay / 1000
+        svg += (
+            f'\n<rect class="bar" style="animation-delay: {animation_delay}ms" x="{bar_x}" y="{bar_top}" width="{bar_actual_width}" height="{bar_height}" rx="3" fill="{bar_color}">'
+            f'\n  <animate attributeName="height" from="0" to="{bar_height}" dur="0.7s" begin="{begin_s:.2f}s" fill="freeze"/>'
+            f'\n  <animate attributeName="y" from="{base_y}" to="{bar_top}" dur="0.7s" begin="{begin_s:.2f}s" fill="freeze"/>'
+            f'\n</rect>'
+        )
 
         # Draw weekday label
         label_x = bar_x + bar_actual_width / 2

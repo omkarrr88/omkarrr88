@@ -19,5 +19,9 @@ g {
 </linearGradient>
 </defs>
 <rect x="258.80000000000007" y="27.5" width="641.1999999999999" height="1" fill="url(#rule-gradient-snake)"/>
+<rect x="258.80000000000007" y="27.0" width="60" height="2" rx="1" fill="#9ece6a" opacity="0.45">
+  <animate attributeName="x" from="258.80000000000007" to="840.0" dur="4.5s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0;0.45;0.45;0" keyTimes="0;0.15;0.75;1" dur="4.5s" repeatCount="indefinite"/>
+</rect>
 </g>
 </svg>

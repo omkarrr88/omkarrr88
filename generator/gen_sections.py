@@ -132,6 +132,18 @@ g {
     rule_width = width - gradient_start_x - 20
     svg_content += f'<rect x="{gradient_start_x}" y="{rule_y}" width="{rule_width}" height="{rule_height}" fill="url(#{gradient_id})"/>\n'
 
+    # Slow light sweep along the rule (SMIL x animation — attribute-based)
+    sweep_end = gradient_start_x + rule_width - 60
+    svg_content += (
+        f'<rect x="{gradient_start_x}" y="{rule_y - 0.5}" width="60" height="2" rx="1" '
+        f'fill="{accent_color}" opacity="0.45">\n'
+        f'  <animate attributeName="x" from="{gradient_start_x}" to="{sweep_end}" '
+        f'dur="4.5s" repeatCount="indefinite"/>\n'
+        f'  <animate attributeName="opacity" values="0;0.45;0.45;0" keyTimes="0;0.15;0.75;1" '
+        f'dur="4.5s" repeatCount="indefinite"/>\n'
+        f'</rect>\n'
+    )
+
     svg_content += '</g>\n'
     svg_content += '</svg>'
 

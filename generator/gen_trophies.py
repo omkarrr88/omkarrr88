@@ -91,7 +91,7 @@ def get_tier(metric_name: str, value: int) -> Tuple[str, int]:
     return "iron", pct
 
 
-def medal_glyph(x: float, y: float, color: str) -> str:
+def medal_glyph(x: float, y: float, color: str, tile_index: int = 0) -> str:
     """
     Generate a simple 24x24 medal glyph (circle + ribbon tails).
     Positioned at (x, y).
@@ -99,7 +99,7 @@ def medal_glyph(x: float, y: float, color: str) -> str:
     # Simple medal: circle (medal) with two ribbon tails
     # Circle at (12, 12) with radius 8
     # Ribbons: left and right paths
-    circle = f'<circle cx="{x + 12}" cy="{y + 12}" r="8" fill="{color}"/>'
+    circle = f'<circle cx="{x + 12}" cy="{y + 12}" r="8" fill="{color}">\n      <animate attributeName="opacity" values="1;0.7;1" dur="3s" begin="{tile_index * 0.4:.1f}s" repeatCount="indefinite"/>\n    </circle>'
     # Left ribbon tail
     left_ribbon = f'<path d="M {x+8} {y+2} L {x+6} {y} L {x+7} {y+6}" fill="{color}"/>'
     # Right ribbon tail
@@ -215,7 +215,7 @@ def generate_trophy_svg(data: dict) -> str:
         # Medal glyph (24px at top center)
         tile_center_x = x + (tile_width / 2)
         medal_x = tile_center_x - 12  # 24px wide, center it
-        svg += f"\n    {medal_glyph(medal_x, y_start, TIER_COLORS[tier_name])}"
+        svg += f"\n    {medal_glyph(medal_x, y_start, TIER_COLORS[tier_name], idx)}"
 
         # Big value (18px, 700, PALETTE text, centered)
         value_formatted = format_number(value)
@@ -251,7 +251,11 @@ def generate_trophy_svg(data: dict) -> str:
 
         # Progress fill (tier color)
         progress_width = (bar_width * progress_pct) / 100
-        svg += f'\n    <rect x="{bar_x}" y="{bar_y}" width="{progress_width}" height="{bar_height}" rx="1.5" fill="{TIER_COLORS[tier_name]}"/>'
+        svg += (
+            f'\n    <rect x="{bar_x}" y="{bar_y}" width="{progress_width}" height="{bar_height}" rx="1.5" fill="{TIER_COLORS[tier_name]}">'
+            f'\n      <animate attributeName="width" from="0" to="{progress_width}" dur="0.9s" begin="{0.3 + idx * 0.12:.2f}s" fill="backwards"/>'
+            f'\n    </rect>'
+        )
 
         svg += '\n  </g>'
 
@@ -310,7 +314,7 @@ def main():
         ("prs", stats.get("prs", 0)),
         ("commits", stats.get("commits_total", 0)),
         ("stars", stats.get("stars", 0)),
-        ("followers", user.get("followers", 0)),
+        ("repos", user.get("public_repos", 0)),
     ]
 
     tiers_today = {}

@@ -242,9 +242,20 @@ def generate_svg(data: Dict[str, Any], output_path: str) -> None:
 
         # Draw line on top of area
         svg_content += (
-            f'\n  <path d="{line_path}" '
+            f'\n  <path id="activity-line" d="{line_path}" '
             f'stroke="{PALETTE["blue"]}" stroke-width="2" fill="none" '
             f'stroke-linecap="round" stroke-linejoin="round"/>'
+        )
+
+        # Live pulse: a glowing dot rides the contribution line forever
+        # (SMIL animateMotion — attribute-based, safe alongside CSS rules)
+        svg_content += (
+            f'\n  <circle r="6" fill="{PALETTE["purple"]}" opacity="0.25">'
+            f'\n    <animateMotion dur="8s" repeatCount="indefinite"><mpath href="#activity-line"/></animateMotion>'
+            f'\n  </circle>'
+            f'\n  <circle r="3" fill="{PALETTE["purple"]}">'
+            f'\n    <animateMotion dur="8s" repeatCount="indefinite"><mpath href="#activity-line"/></animateMotion>'
+            f'\n  </circle>'
         )
 
     # Draw dots for each week

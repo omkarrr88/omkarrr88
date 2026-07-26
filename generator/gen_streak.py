@@ -140,7 +140,11 @@ def generate_streak_svg(data: dict) -> str:
 
     # Animated flame ring (orange stroke with pulse glow)
     # Start visible for static rendering (no stroke-dasharray initial state for PNG)
-    svg += f'\n<circle class="flame-ring" cx="{x_center}" cy="{center_y}" r="{ring_radius}" fill="none" stroke="{PALETTE["orange"]}" stroke-width="3" stroke-linecap="round"/>'
+    svg += (
+        f'\n<circle class="flame-ring" cx="{x_center}" cy="{center_y}" r="{ring_radius}" fill="none" stroke="{PALETTE["orange"]}" stroke-width="3" stroke-linecap="round">'
+        f'\n  <animate attributeName="stroke-opacity" values="1;0.72;0.95;0.65;1;0.85;1" dur="2.6s" repeatCount="indefinite"/>'
+        f'\n</circle>'
+    )
 
     # Current streak number inside ring
     svg += f'\n<text x="{x_center}" y="{center_y + 10}" font-family="{FONT}" font-size="32" font-weight="700" fill="{PALETTE["orange"]}" text-anchor="middle">{esc(current_streak)}</text>'
