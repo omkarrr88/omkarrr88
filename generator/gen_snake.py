@@ -259,8 +259,9 @@ def generate_snake_svg(data: Dict[str, Any]) -> str:
 
     # No title row — the README section banner titles this card.
 
-    # Group for grid and snake (with translation to center)
-    svg += f'\n<g class="grid" transform="translate({GRID_MARGIN_LEFT},{GRID_MARGIN_TOP})">'
+    # Group for grid and snake. NO transform here — margins are baked into
+    # every coordinate (a translate on top of them double-offset the grid).
+    svg += '\n<g class="grid">'
 
     # Draw grid cells
     cell_index = 0

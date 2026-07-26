@@ -99,6 +99,7 @@ def generate_tech(out_path: str, mock: bool = True) -> None:
             ("Next.js", "nextdotjs", ICONS.get("nextdotjs", {}).get("display_hex", "")),
             ("Vite", "vite", ""),
             ("Tailwind CSS", "tailwindcss", ""),
+            ("Three.js", "threedotjs", ICONS.get("threedotjs", {}).get("display_hex", "")),
         ],
         "Backend & APIs": [
             ("Node.js", "nodedotjs", ""),
@@ -116,6 +117,8 @@ def generate_tech(out_path: str, mock: bool = True) -> None:
             ("RAG", None, ""),
             ("LLM APIs", None, ""),
             ("MCP", "anthropic", ""),
+            ("LangChain", "langchain", ICONS.get("langchain", {}).get("display_hex", "")),
+            ("pgvector", None, ""),
         ],
         "ML & Data": [
             ("PyTorch", "pytorch", ""),
@@ -124,6 +127,7 @@ def generate_tech(out_path: str, mock: bool = True) -> None:
             ("OpenCV", "opencv", ""),
             ("Pandas", "pandas", ICONS.get("pandas", {}).get("display_hex", "")),
             ("NumPy", "numpy", ICONS.get("numpy", {}).get("display_hex", "")),
+            ("Streamlit", "streamlit", ""),
         ],
         "Databases": [
             ("PostgreSQL", "postgresql", ""),
@@ -132,6 +136,7 @@ def generate_tech(out_path: str, mock: bool = True) -> None:
             ("Prisma", "prisma", ICONS.get("prisma", {}).get("display_hex", "")),
             ("Supabase", "supabase", ""),
             ("Redis", "redis", ""),
+            ("SQLAlchemy", "sqlalchemy", ""),
         ],
         "Cloud & DevOps": [
             ("Docker", "docker", ""),
@@ -141,7 +146,13 @@ def generate_tech(out_path: str, mock: bool = True) -> None:
             ("GitHub Actions", "githubactions", ""),
             ("Git", "git", ""),
         ],
+        "Blockchain": [
+            ("Solidity", "solidity", ICONS.get("solidity", {}).get("display_hex", "")),
+            ("Web3.js", "web3dotjs", ""),
+            ("Hardhat", None, ""),
+        ],
         "Testing & Monitoring": [
+            ("pytest", "pytest", ""),
             ("Vitest", "vitest", ""),
             ("Playwright", "playwright", ""),
             ("Sentry", "sentry", ICONS.get("sentry", {}).get("display_hex", "")),
@@ -155,6 +166,7 @@ def generate_tech(out_path: str, mock: bool = True) -> None:
         "ML & Data": PALETTE["orange"],
         "Databases": PALETTE["teal"],
         "Cloud & DevOps": PALETTE["green"],
+        "Blockchain": PALETTE["orange"],
         "Testing & Monitoring": PALETTE["cyan"],
     }
 
