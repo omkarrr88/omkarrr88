@@ -25,8 +25,8 @@
   <text x="-10" y="109.0" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#6e7781" text-anchor="end">46</text>
   <line x1="0" y1="140.0" x2="840.0" y2="140.0" stroke="#d0d7de" stroke-width="1" opacity="0.5"/>
   <text x="-10" y="144.0" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#6e7781" text-anchor="end">0</text>
-  <path d="M 0.0 97.8 L 32.3 13.5 L 64.6 73.0 L 96.9 74.5 L 129.2 120.4 L 161.5 120.4 L 193.8 78.3 L 226.2 111.4 L 258.5 91.1 L 290.8 103.1 L 323.1 103.9 L 355.4 133.2 L 387.7 134.7 L 420.0 124.2 L 452.3 99.4 L 484.6 140.0 L 516.9 137.7 L 549.2 73.8 L 581.5 62.5 L 613.8 135.5 L 646.2 138.5 L 678.5 89.6 L 710.8 0.0 L 743.1 120.4 L 775.4 121.9 L 807.7 106.1 L 840.0 136.2 L 840.0 140.0 L 0.0 140.0 Z" fill="#3d59a1" fill-opacity="0.15" stroke="none"/>
-  <path d="M 0.0 97.8 L 32.3 13.5 L 64.6 73.0 L 96.9 74.5 L 129.2 120.4 L 161.5 120.4 L 193.8 78.3 L 226.2 111.4 L 258.5 91.1 L 290.8 103.1 L 323.1 103.9 L 355.4 133.2 L 387.7 134.7 L 420.0 124.2 L 452.3 99.4 L 484.6 140.0 L 516.9 137.7 L 549.2 73.8 L 581.5 62.5 L 613.8 135.5 L 646.2 138.5 L 678.5 89.6 L 710.8 0.0 L 743.1 120.4 L 775.4 121.9 L 807.7 106.1 L 840.0 136.2" stroke="#3d59a1" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 0.0 97.8 L 32.3 13.5 L 64.6 73.0 L 96.9 74.5 L 129.2 120.4 L 161.5 120.4 L 193.8 78.3 L 226.2 111.4 L 258.5 91.1 L 290.8 103.1 L 323.1 103.9 L 355.4 133.2 L 387.7 134.7 L 420.0 124.2 L 452.3 99.4 L 484.6 140.0 L 516.9 137.7 L 549.2 73.8 L 581.5 62.5 L 613.8 135.5 L 646.2 138.5 L 678.5 89.6 L 710.8 0.0 L 743.1 120.4 L 775.4 121.9 L 807.7 106.1 L 840.0 135.5 L 840.0 140.0 L 0.0 140.0 Z" fill="#3d59a1" fill-opacity="0.15" stroke="none"/>
+  <path d="M 0.0 97.8 L 32.3 13.5 L 64.6 73.0 L 96.9 74.5 L 129.2 120.4 L 161.5 120.4 L 193.8 78.3 L 226.2 111.4 L 258.5 91.1 L 290.8 103.1 L 323.1 103.9 L 355.4 133.2 L 387.7 134.7 L 420.0 124.2 L 452.3 99.4 L 484.6 140.0 L 516.9 137.7 L 549.2 73.8 L 581.5 62.5 L 613.8 135.5 L 646.2 138.5 L 678.5 89.6 L 710.8 0.0 L 743.1 120.4 L 775.4 121.9 L 807.7 106.1 L 840.0 135.5" stroke="#3d59a1" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="0.0" cy="97.8" r="3" fill="#7847bd" class="dot dot-0"/>
   <circle cx="32.3" cy="13.5" r="3" fill="#7847bd" class="dot dot-1"/>
   <circle cx="64.6" cy="73.0" r="3" fill="#7847bd" class="dot dot-2"/>
@@ -53,7 +53,7 @@
   <circle cx="743.1" cy="120.4" r="3" fill="#7847bd" class="dot dot-23"/>
   <circle cx="775.4" cy="121.9" r="3" fill="#7847bd" class="dot dot-24"/>
   <circle cx="807.7" cy="106.1" r="3" fill="#7847bd" class="dot dot-25"/>
-  <circle cx="840.0" cy="136.2" r="3" fill="#7847bd" class="dot dot-26"/>
+  <circle cx="840.0" cy="135.5" r="3" fill="#7847bd" class="dot dot-26"/>
   <rect x="710.8" y="-22.0" width="40" height="20" rx="3" fill="#0f766e" opacity="0.9"/>
   <text x="727.8" y="-10.0" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">186</text>
   <text x="0.0" y="160.0" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#6e7781" text-anchor="middle">Jan</text>

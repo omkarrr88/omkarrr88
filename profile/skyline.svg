@@ -327,9 +327,9 @@
   <polygon points="775.9,181.0 788.9,181.0 785.0,183.3 772.0,183.3" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <g class="tower tower-787">
-  <polygon points="787.0,210.0 800.0,210.0 803.9,206.8 790.9,206.8" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="800.0,210.0 803.9,207.7 803.9,206.8 800.0,209.1" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
-  <polygon points="790.9,206.8 803.9,206.8 800.0,209.1 787.0,209.1" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="787.0,210.0 800.0,210.0 803.9,206.1 790.9,206.1" fill="#6687cd" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="800.0,210.0 803.9,207.7 803.9,206.1 800.0,208.5" fill="#536ca3" stroke="#2f334d" stroke-width="0.5"/>
+  <polygon points="790.9,206.1 803.9,206.1 800.0,208.5 787.0,208.5" fill="#bcd0fb" stroke="#2f334d" stroke-width="0.5"/>
 </g>
 <line x1="22.0" y1="210.0" x2="800.0" y2="210.0" stroke="#2f334d" stroke-width="1"/>
 <text x="28.5" y="230" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle">Aug</text>
@@ -344,5 +344,5 @@
 <text x="613.5" y="230" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle">May</text>
 <text x="688.5" y="230" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle">Jun</text>
 <text x="748.5" y="230" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle">Jul</text>
-<text x="898" y="36" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="end">1,442 contributions · last 52 weeks</text>
+<text x="898" y="36" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="end">1,443 contributions · last 52 weeks</text>
 </svg>
