@@ -10,7 +10,7 @@ g {
 </style>
 <g>
 <rect x="8" y="12.0" width="32" height="32" rx="16.0" fill="#3d59a1" opacity="0.15"/>
-<g transform="translate(12.0,16.0)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15h4v-6h-4v6zm0-8h4V7h-4v2z" fill="#3d59a1"/></g>
+<g transform="translate(12.0,16.0)"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="#3d59a1"/></g>
 <text x="56" y="35.0" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="20" font-weight="700" fill="#24292f">About Me</text>
 <defs>
 <linearGradient id="rule-gradient-about" x1="0%" y1="0%" x2="100%" y2="0%">
