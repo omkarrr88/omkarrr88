@@ -479,6 +479,49 @@ def _make_mock_calendar() -> List[Dict[str, Any]]:
     return calendar
 
 
+def _get_project_stars(repo_path: str) -> Optional[int]:
+    """
+    Fetch star count for a single repository via REST API.
+    Public repos work unauthenticated; uses GITHUB_TOKEN if available.
+    Returns None on failure.
+    """
+    url = f"https://api.github.com/repos/{repo_path}"
+    headers = {}
+    token = os.getenv("GITHUB_TOKEN")
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+
+    response = _make_request(url, headers=headers if headers else None)
+    if response:
+        try:
+            data = json.loads(response)
+            return data.get("stargazers_count", None)
+        except json.JSONDecodeError:
+            pass
+    return None
+
+
+def _get_all_project_stars() -> Dict[str, Optional[int]]:
+    """
+    Fetch star counts for all 6 projects.
+    Returns dict mapping project key to star count (None if fetch failed).
+    """
+    project_repos = {
+        "chakravyuh": "UjjwalPardeshi/Chakravyuh",
+        "smart-puc": "omkarrr88/Smart_PUC",
+        "v2v": "omkarrr88/V2V",
+        "movie-recommender": "omkarrr88/movie-recommendation-system",
+        "face-attendance": "omkarrr88/face-recognition-attendance-system",
+        "fitness-tracker": "omkarrr88/Fitness-Tracker",
+    }
+
+    stars = {}
+    for key, repo_path in project_repos.items():
+        stars[key] = _get_project_stars(repo_path)
+
+    return stars
+
+
 def load(mock: bool = False) -> Dict[str, Any]:
     """
     Load GitHub user data for omkarrr88.
@@ -487,7 +530,7 @@ def load(mock: bool = False) -> Dict[str, Any]:
         mock: If True, return deterministic fixture. If False, fetch real data.
 
     Returns:
-        Dict with user, stats, calendar, streak, languages.
+        Dict with user, stats, calendar, streak, languages, project_stars.
         On any error, returns fallback mock data (never hard fails).
     """
     login = "omkarrr88"
@@ -527,6 +570,14 @@ def load(mock: bool = False) -> Dict[str, Any]:
                 {"name": "Jupyter Notebook", "color": "DA5B0B", "pct": 7.3},
                 {"name": "Shell", "color": "89e051", "pct": 6.5},
             ],
+            "project_stars": {
+                "chakravyuh": 12,
+                "smart-puc": 8,
+                "v2v": 5,
+                "movie-recommender": 3,
+                "face-attendance": 2,
+                "fitness-tracker": 4,
+            },
         }
 
     # Real mode: fetch from GitHub API
@@ -536,6 +587,7 @@ def load(mock: bool = False) -> Dict[str, Any]:
         "calendar": [],
         "streak": {"current": 0, "longest": 0, "total": 0, "current_range": "", "longest_range": ""},
         "languages": [],
+        "project_stars": {},
     }
 
     # Fetch user info (public, no auth required)
@@ -607,6 +659,9 @@ def load(mock: bool = False) -> Dict[str, Any]:
             {"name": "Jupyter Notebook", "color": "DA5B0B", "pct": 7.3},
             {"name": "Shell", "color": "89e051", "pct": 6.5},
         ]
+
+    # Fetch project star counts (works unauthenticated for public repos)
+    result["project_stars"] = _get_all_project_stars()
 
     return result
 

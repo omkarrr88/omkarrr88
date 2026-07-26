@@ -13,7 +13,7 @@ import os
 import xml.dom.minidom
 from datetime import datetime
 
-from theme import esc
+from theme import PALETTE, FONT, MONO, esc
 
 def render(data: dict, out_path: str) -> None:
     """
@@ -35,16 +35,6 @@ def generate_header(out_path: str, mock: bool = True, include_animations: bool =
         mock: Whether to use mock data (ignored for header, always static)
         include_animations: Whether to include CSS animations (set to False for static rendering)
     """
-
-    # Colors from tokyonight palette
-    bg = "#1a1b27"
-    border = "#2f334d"
-    blue = "#7aa2f7"
-    purple = "#bb9af7"
-    cyan = "#7dcfff"
-    text_muted = "#565f89"
-    text_muted_readable = "#8a93b2"  # Works on both dark and light
-    green = "#9ece6a"
 
     width, height = 920, 160
 
@@ -141,23 +131,23 @@ def generate_header(out_path: str, mock: bool = True, include_animations: bool =
         f"<style>{css}</style>",
     ]
 
-    # Defs for gradients
-    svg_parts.append("""<defs>
+    # Defs for gradients (using PALETTE colors)
+    svg_parts.append(f"""<defs>
 <linearGradient id="nameGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-  <stop offset="0%" style="stop-color:#7aa2f7;stop-opacity:0.6" />
-  <stop offset="100%" style="stop-color:#bb9af7;stop-opacity:0.6" />
+  <stop offset="0%" style="stop-color:{PALETTE["blue"]};stop-opacity:0.6" />
+  <stop offset="100%" style="stop-color:{PALETTE["purple"]};stop-opacity:0.6" />
 </linearGradient>
 </defs>""")
 
     # Decorative code glyphs on the sides (subtle, muted)
-    svg_parts.append(f'<text x="18" y="48" font-family="{MONO}" font-size="20" font-weight="400" fill="{border}" opacity="0.6">&lt;/&gt;</text>')
-    svg_parts.append(f'<text x="{width - 48}" y="48" font-family="{MONO}" font-size="20" font-weight="400" fill="{border}" opacity="0.6">{{}}</text>')
+    svg_parts.append(f'<text x="18" y="48" font-family="{MONO}" font-size="20" font-weight="400" fill="{PALETTE["border"]}" opacity="0.6">&lt;/&gt;</text>')
+    svg_parts.append(f'<text x="{width - 48}" y="48" font-family="{MONO}" font-size="20" font-weight="400" fill="{PALETTE["border"]}" opacity="0.6">{{}}</text>')
 
     # Everything centered on the card's vertical axis
     cx = width // 2
 
     # Main name headline "Omkar Kadam"
-    svg_parts.append(f'<text x="{cx}" y="50" text-anchor="middle" font-family="{FONT}" font-size="32" font-weight="700" fill="{blue}">Omkar Kadam</text>')
+    svg_parts.append(f'<text x="{cx}" y="50" text-anchor="middle" font-family="{FONT}" font-size="32" font-weight="700" fill="{PALETTE["blue"]}">Omkar Kadam</text>')
 
     # Gradient underline under name (centered)
     svg_parts.append(f'<rect x="{cx - 140}" y="58" width="280" height="3" fill="url(#nameGradient)" rx="1.5"/>')
@@ -175,19 +165,19 @@ def generate_header(out_path: str, mock: bool = True, include_animations: bool =
             half_w = len(phrase) * mono_char_w / 2
             cursor_x = cx + half_w + 6
             svg_parts.append(f'<g class="phrase-{i}" style="opacity: {initial_opacity};">')
-            svg_parts.append(f'<text x="{cx}" y="105" text-anchor="middle" font-family="{MONO}" font-size="13" font-weight="400" fill="{cyan}">{esc(phrase)}</text>')
-            svg_parts.append(f'<rect x="{cursor_x:.0f}" y="92" width="2.5" height="17" fill="{blue}" class="cursor"/>')
+            svg_parts.append(f'<text x="{cx}" y="105" text-anchor="middle" font-family="{MONO}" font-size="13" font-weight="400" fill="{PALETTE["cyan"]}">{esc(phrase)}</text>')
+            svg_parts.append(f'<rect x="{cursor_x:.0f}" y="92" width="2.5" height="17" fill="{PALETTE["blue"]}" class="cursor"/>')
             svg_parts.append('</g>')
     else:
         # Static rendering: only show first phrase
-        svg_parts.append(f'<text x="{cx}" y="105" text-anchor="middle" font-family="{MONO}" font-size="13" font-weight="400" fill="{cyan}">{esc(phrases[0])}</text>')
+        svg_parts.append(f'<text x="{cx}" y="105" text-anchor="middle" font-family="{MONO}" font-size="13" font-weight="400" fill="{PALETTE["cyan"]}">{esc(phrases[0])}</text>')
 
     # Bottom meta line, centered: pulsing green dot + availability + location.
     # Separate positioned elements — no tspan advance-width reliance.
-    svg_parts.append(f'<circle cx="{cx - 132}" cy="136" r="3.5" fill="{green}" class="pulse-dot"/>')
-    svg_parts.append(f'<text x="{cx - 122}" y="140" font-family="{FONT}" font-size="11" font-weight="500" fill="{text_muted_readable}">Available for work</text>')
-    svg_parts.append(f'<line x1="{cx - 10}" y1="128" x2="{cx - 10}" y2="140" stroke="{border}" stroke-width="1"/>')
-    svg_parts.append(f'<text x="{cx + 2}" y="140" font-family="{FONT}" font-size="11" font-weight="400" fill="{text_muted_readable}">📍 Navi Mumbai, India</text>')
+    svg_parts.append(f'<circle cx="{cx - 132}" cy="136" r="3.5" fill="{PALETTE["green"]}" class="pulse-dot"/>')
+    svg_parts.append(f'<text x="{cx - 122}" y="140" font-family="{FONT}" font-size="11" font-weight="500" fill="{PALETTE["text"]}">Available for work</text>')
+    svg_parts.append(f'<line x1="{cx - 10}" y1="128" x2="{cx - 10}" y2="140" stroke="{PALETTE["border"]}" stroke-width="1"/>')
+    svg_parts.append(f'<text x="{cx + 2}" y="140" font-family="{FONT}" font-size="11" font-weight="400" fill="{PALETTE["text"]}">📍 Navi Mumbai, India</text>')
 
     svg_parts.append('</svg>')
 
@@ -208,11 +198,6 @@ def generate_header(out_path: str, mock: bool = True, include_animations: bool =
         f.write(svg_content)
 
     print(f"✓ Header SVG generated: {out_path}")
-
-
-# Font definitions from theme
-FONT = "'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif"
-MONO = "'Cascadia Code', 'Fira Code', monospace"
 
 
 def main():

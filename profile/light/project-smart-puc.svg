@@ -1,0 +1,19 @@
+<svg width="452" height="150" viewBox="0 0 452 150" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="451" height="149" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
+<style>
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+g {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+</style>
+<rect x="0.5" y="0.5" width="4" height="149" fill="#bb9af7" rx="10" ry="0"/>
+<g>
+<text x="22" y="38" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="16" font-weight="600" fill="#bb9af7">Smart PUC</text>
+<text x="22" y="58" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="12.5" fill="#24292f">Blockchain vehicle-emission monitoring with signed OBD</text>
+<text x="22" y="74" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="12.5" fill="#24292f">telemetry, on-chain records and NFT certificates.</text>
+<rect x="22" y="122" width="80.03999999999999" height="18" rx="9" fill="#f3f4f8" stroke="#d0d7de" stroke-width="0.5"/><g transform="translate(28,125) scale(0.5)"><path d="M4.409 6.608L7.981.255l3.572 6.353H4.409zM8.411 0l3.569 6.348L15.552 0H8.411zm4.036 17.392l3.572 6.354 3.575-6.354h-7.147zm-.608-10.284h-7.43l3.715 6.605 3.715-6.605zm.428-.25h7.428L15.982.255l-3.715 6.603zM15.589 24l-3.569-6.349L8.448 24h7.141zm-3.856-6.858H4.306l3.712 6.603 3.715-6.603zm.428-.25h7.433l-3.718-6.605-3.715 6.605z" fill="#363636"/></g><text x="42" y="135" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#24292f">Solidity</text><rect x="108.03999999999999" y="122" width="85.76" height="18" rx="9" fill="#f3f4f8" stroke="#d0d7de" stroke-width="0.5"/><g transform="translate(114.03999999999999,125) scale(0.5)"><path d="M12 .0387C5.3729.0384.0003 5.3931 0 11.9988c-.001 6.6066 5.372 11.9628 12 11.9625 6.628.0003 12.001-5.3559 12-11.9625-.0003-6.6057-5.3729-11.9604-12-11.96m-.829 5.4153h7.55l-7.5805 5.3284h5.1828L5.279 18.5436q2.9466-6.5444 5.892-13.0896" fill="#009688"/></g><text x="128.04" y="135" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#24292f">FastAPI</text><rect x="199.8" y="122" width="57.760000000000005" height="18" rx="9" fill="#f3f4f8" stroke="#d0d7de" stroke-width="0.5"/><text x="205.8" y="135" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#24292f">Web3.py</text>
+</g>
+</svg>

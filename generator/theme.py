@@ -6,8 +6,8 @@ Implements the tokyonight design system with strict GitHub SVG compatibility.
 
 import xml.dom.minidom
 
-# tokyonight palette
-PALETTE = {
+# tokyonight dark palette (default)
+PALETTE_DARK = {
     "bg": "#1a1b27",           # card background
     "bg_deep": "#16161e",      # inset panels
     "border": "#2f334d",       # 1px card border, rx=10
@@ -22,9 +22,46 @@ PALETTE = {
     "muted": "#565f89",        # text muted
 }
 
+# Light palette (for light mode)
+PALETTE_LIGHT = {
+    "bg": "#ffffff",           # card background
+    "bg_deep": "#f3f4f8",      # inset panels
+    "border": "#d0d7de",       # 1px card border, rx=10
+    "blue": "#3d59a1",         # accent primary (headings, key numbers)
+    "purple": "#7847bd",       # accent secondary
+    "teal": "#0f766e",         # accent positive/highlight
+    "green": "#587539",        # accent green
+    "orange": "#b15c00",       # accent warm highlights
+    "red": "#c64343",          # accent red
+    "cyan": "#0369a1",         # accent cyan
+    "text": "#24292f",         # text primary
+    "muted": "#6e7781",        # text muted
+}
+
+# Mutable palette (used by generators at render time)
+PALETTE = PALETTE_DARK.copy()
+
 # Typography
 FONT = "'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif"
 MONO = "'Cascadia Code', 'Fira Code', monospace"
+
+
+def apply_theme(name: str) -> None:
+    """
+    Apply a theme by updating the module-level PALETTE dict.
+
+    Args:
+        name: Theme name ('dark' or 'light')
+    """
+    global PALETTE
+    if name == "dark":
+        PALETTE.clear()
+        PALETTE.update(PALETTE_DARK)
+    elif name == "light":
+        PALETTE.clear()
+        PALETTE.update(PALETTE_LIGHT)
+    else:
+        raise ValueError(f"Unknown theme: {name}. Use 'dark' or 'light'.")
 
 
 def esc(s):
@@ -166,6 +203,38 @@ g:nth-child(3) {
         f.write(svg_content)
 
     print(f"✓ Demo SVG written to {args.out}")
+
+def get_brand_hex(brand_hex: str) -> str:
+    """
+    Get brand color with light-theme fallback for white/light colors.
+    On light theme, pure white or very light colors are replaced with
+    their true brand hex to avoid white-on-white rendering.
+
+    Args:
+        brand_hex: Brand color hex (without #)
+
+    Returns:
+        Hex color code (without #) appropriate for current theme
+    """
+    # On dark theme, use brand hex as-is
+    if PALETTE == PALETTE_DARK:
+        return brand_hex
+
+    # On light theme, check if color is white/light and needs fallback
+    brand_hex_lower = brand_hex.lower()
+
+    # Map of white/light display colors to their true brand hexes
+    light_color_map = {
+        "ffffff": "000000",  # White -> Black (for apps like X, Next.js)
+        "cccccc": "666666",  # Light gray -> Medium gray
+        "c0caf5": "3d59a1",  # Theme's light text -> Light blue
+    }
+
+    if brand_hex_lower in light_color_map:
+        return light_color_map[brand_hex_lower]
+
+    return brand_hex
+
 
 def text_width(s: str, font_size: float) -> float:
     """Per-character width estimate for the Segoe UI-ish system stack.

@@ -1,0 +1,22 @@
+<svg width="66" height="42" viewBox="0 0 66 42" xmlns="http://www.w3.org/2000/svg">
+<style>
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes shine {
+  0% {
+    background-position: -100% center;
+  }
+  100% {
+    background-position: 100% center;
+  }
+}
+g {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+</style>
+<rect x="0.5" y="0.5" width="65" height="41" rx="21" fill="#f3f4f8" stroke="#d0d7de" stroke-width="1"/>
+<g transform="translate(16,11.0) scale(0.833)"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z" fill="#000000"/></g>
+<text x="42" y="23.5" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="14" font-weight="600" fill="#24292f">X</text>
+</svg>

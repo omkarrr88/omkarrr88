@@ -1,0 +1,23 @@
+<svg width="920" height="56" viewBox="0 0 920 56" xmlns="http://www.w3.org/2000/svg">
+<style>
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+g {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+</style>
+<g>
+<rect x="8" y="12.0" width="32" height="32" rx="16.0" fill="#73daca" opacity="0.15"/>
+<g transform="translate(12.0,16.0)"><path d="M5 9.1h3V19H5zM10.1 5h2.8v14h-2.8zm5.9 5H19v9h-3.1z" fill="#73daca"/></g>
+<text x="56" y="35.0" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="20" font-weight="700" fill="#c0caf5">GitHub Stats</text>
+<defs>
+<linearGradient id="rule-gradient-stats" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" style="stop-color:#73daca;stop-opacity:1" />
+<stop offset="100%" style="stop-color:#73daca;stop-opacity:0" />
+</linearGradient>
+</defs>
+<rect x="194.0" y="27.5" width="706.0" height="1" fill="url(#rule-gradient-stats)"/>
+</g>
+</svg>

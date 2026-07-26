@@ -1,0 +1,23 @@
+<svg width="920" height="56" viewBox="0 0 920 56" xmlns="http://www.w3.org/2000/svg">
+<style>
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+g {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+</style>
+<g>
+<rect x="8" y="12.0" width="32" height="32" rx="16.0" fill="#7847bd" opacity="0.15"/>
+<g transform="translate(12.0,16.0)"><path d="M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.37-.29-.59-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.37-2.65c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.37 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.47 0-.59.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.37.29.59.22l2.49-1c.52.4 1.08.73 1.69.98l.37 2.65c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.37-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.48 0 .59-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z" fill="#7847bd"/></g>
+<text x="56" y="35.0" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="20" font-weight="700" fill="#24292f">Tech Stack</text>
+<defs>
+<linearGradient id="rule-gradient-tech" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" style="stop-color:#7847bd;stop-opacity:1" />
+<stop offset="100%" style="stop-color:#7847bd;stop-opacity:0" />
+</linearGradient>
+</defs>
+<rect x="183.60000000000002" y="27.5" width="716.4" height="1" fill="url(#rule-gradient-tech)"/>
+</g>
+</svg>

@@ -21,6 +21,7 @@ from typing import Dict, Any, List, Tuple
 sys.path.insert(0, str(Path(__file__).parent))
 
 from data import load as load_data
+from theme import apply_theme
 
 # Import all generators (they must have render(data, out_path) function)
 import gen_header
@@ -32,15 +33,18 @@ import gen_achievements
 import gen_connect
 import gen_projects
 import gen_tech
+import gen_skyline
+import gen_sections
 
 
-def render_all(data: Dict[str, Any], out_dir: str = "profile") -> Tuple[int, List[Tuple[str, bool, str]]]:
+def render_all(data: Dict[str, Any], out_dir: str = "profile", theme: str = "dark") -> Tuple[int, List[Tuple[str, bool, str]]]:
     """
     Render all cards using pre-loaded data.
 
     Args:
         data: Shared data dict from data.load()
         out_dir: Base output directory for all SVGs
+        theme: Theme name ('dark' or 'light')
 
     Returns:
         Tuple of (exit_code, results_list)
@@ -48,6 +52,9 @@ def render_all(data: Dict[str, Any], out_dir: str = "profile") -> Tuple[int, Lis
         exit_code: 0 if any succeeded, 1 if all failed
     """
     results: List[Tuple[str, bool, str]] = []
+
+    # Apply theme
+    apply_theme(theme)
 
     # Ensure output directory exists
     os.makedirs(out_dir, exist_ok=True)
@@ -60,6 +67,7 @@ def render_all(data: Dict[str, Any], out_dir: str = "profile") -> Tuple[int, Lis
         ("streak", gen_streak, lambda data, path: gen_streak.render(data, path), f"{out_dir}/streak.svg"),
         ("activity", gen_activity, lambda data, path: gen_activity.render(data, path), f"{out_dir}/activity.svg"),
         ("achievements", gen_achievements, lambda data, path: gen_achievements.render(data, path), f"{out_dir}/achievements.svg"),
+        ("skyline", gen_skyline, lambda data, path: gen_skyline.render(data, path), f"{out_dir}/skyline.svg"),
     ]
 
     # Render single-file cards
@@ -115,6 +123,23 @@ def render_all(data: Dict[str, Any], out_dir: str = "profile") -> Tuple[int, Lis
         results.append(("tech", False, str(e)))
         print(f"✗ {'tech':20} FAILED: {e}")
 
+    # Multi-file cards: section banners
+    try:
+        gen_sections.render_all(data, out_dir)
+        section_files = [
+            f"{out_dir}/section-about.svg",
+            f"{out_dir}/section-connect.svg",
+            f"{out_dir}/section-tech.svg",
+            f"{out_dir}/section-projects.svg",
+            f"{out_dir}/section-stats.svg",
+            f"{out_dir}/section-snake.svg",
+        ]
+        results.append(("sections", True, f"{len(section_files)} files"))
+        print(f"✓ {'sections':20} → {len(section_files)} section banner files")
+    except Exception as e:
+        results.append(("sections", False, str(e)))
+        print(f"✗ {'sections':20} FAILED: {e}")
+
     # Summary
     successful = sum(1 for _, success, _ in results if success)
     total = len(results)
@@ -159,8 +184,23 @@ def main():
 
     print()
 
-    # Render all cards
-    exit_code, results = render_all(data, args.out_dir)
+    # Render dark theme (original location: profile/)
+    print(f"Rendering dark theme to {args.out_dir}...")
+    exit_code_dark, results_dark = render_all(data, args.out_dir, theme="dark")
+
+    print()
+
+    # Render light theme (new location: profile/light/)
+    light_out_dir = os.path.join(args.out_dir, "light")
+    print(f"Rendering light theme to {light_out_dir}...")
+    exit_code_light, results_light = render_all(data, light_out_dir, theme="light")
+
+    # Return 0 only if both succeeded
+    exit_code = 0 if (exit_code_dark == 0 and exit_code_light == 0) else 1
+
+    print(f"\n{'='*60}")
+    print(f"Dark theme:  {sum(1 for _, s, _ in results_dark if s)}/{len(results_dark)} card groups")
+    print(f"Light theme: {sum(1 for _, s, _ in results_light if s)}/{len(results_light)} card groups")
 
     return exit_code
 

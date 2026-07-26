@@ -12,7 +12,7 @@ import argparse
 import os
 import xml.dom.minidom
 from typing import List, Tuple, Dict, Any
-from theme import PALETTE, FONT, MONO, esc, card_frame, styles, text_width, title_row
+from theme import PALETTE, FONT, MONO, esc, card_frame, styles, text_width, title_row, get_brand_hex
 from icons import ICONS
 
 
@@ -79,7 +79,8 @@ def render_chip(name: str, icon_key: str, display_hex: str, x: int, y: int) -> s
     icon_x = x + 4
     icon_y = y + 4
     if icon_d:
-        svg += f'<g transform="translate({icon_x},{icon_y}) scale(0.667)"><path d="{icon_d}" fill="#{icon_hex}"/></g>'
+        adjusted_hex = get_brand_hex(icon_hex)
+        svg += f'<g transform="translate({icon_x},{icon_y}) scale(0.667)"><path d="{icon_d}" fill="#{adjusted_hex}"/></g>'
 
     # Text label
     text_x = x + 16 + 4 + 4  # icon + gap + padding

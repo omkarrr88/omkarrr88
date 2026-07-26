@@ -15,7 +15,7 @@ import argparse
 import os
 import xml.dom.minidom
 from typing import List, Tuple
-from theme import PALETTE, FONT, MONO, esc, card_frame, styles, text_width as theme_text_width
+from theme import PALETTE, FONT, MONO, esc, card_frame, styles, text_width as theme_text_width, get_brand_hex
 from icons import ICONS
 
 
@@ -84,7 +84,8 @@ def render_tech_chips(
             if icon_d:
                 icon_x = current_x + padding
                 icon_y = y + 3
-                svg += f'<g transform="translate({icon_x},{icon_y}) scale(0.5)"><path d="{icon_d}" fill="#{icon_hex}"/></g>'
+                adjusted_hex = get_brand_hex(icon_hex)
+                svg += f'<g transform="translate({icon_x},{icon_y}) scale(0.5)"><path d="{icon_d}" fill="#{adjusted_hex}"/></g>'
 
             # Text
             text_x = current_x + 12 + 2 + padding
@@ -103,6 +104,7 @@ def generate_project_card(
     tech_chips: List[Tuple[str, str, bool]],  # (name, icon_key, is_text)
     accent_color: str,
     out_path: str,
+    star_count: int = None,
 ) -> None:
     """
     Generate a single project card SVG.
@@ -114,6 +116,7 @@ def generate_project_card(
         tech_chips: List of (name, icon_key, is_text_chip)
         accent_color: Hex color for left accent bar
         out_path: Output file path
+        star_count: Optional star count for badge (None = skip badge)
     """
     width, height = 452, 150
 
@@ -142,6 +145,21 @@ g {
 
     # Title (16px, 600 weight, accent color)
     svg_content += f'\n<text x="22" y="38" font-family="{FONT}" font-size="16" font-weight="600" fill="#{accent_color}">{esc(title)}</text>'
+
+    # Star badge at TOP-RIGHT — only once the repo has real traction;
+    # a "0" or "1" badge undercuts the card. Appears automatically at >=2.
+    if star_count is not None and star_count >= 2:
+        # Simple star icon path (12x12 normalized)
+        star_path = "M6 1.5l1.5 3.5 3.8 0.5-2.8 2.5 0.7 4-3.2-2-3.2 2 0.7-4-2.8-2.5 3.8-0.5L6 1.5z"
+        star_x = width - 38
+        star_y = 22
+        text_x = width - 24
+        text_y = 36
+
+        # Star icon (orange color)
+        svg_content += f'\n<g transform="translate({star_x},{star_y})"><path d="{star_path}" fill="{PALETTE["orange"]}" width="12" height="12"/></g>'
+        # Star count text (12px, 600 weight, orange)
+        svg_content += f'\n<text x="{text_x}" y="{text_y}" font-family="{FONT}" font-size="12" font-weight="600" fill="{PALETTE["orange"]}" text-anchor="end">{esc(str(star_count))}</text>'
 
     # Description (wrapped, 12.5px, text color)
     description_lines = wrap_text(description, max_width=62)
@@ -180,14 +198,19 @@ def render_all(data: dict, base_out_dir: str = "profile") -> None:
     Render all project cards (orchestrator interface).
 
     Args:
-        data: Shared data dict (unused for projects, always static)
+        data: Shared data dict containing project_stars
         base_out_dir: Base output directory for all project files
     """
-    generate_all_projects(base_out_dir, mock=False)
+    generate_all_projects(base_out_dir, data=data, mock=False)
 
 
-def generate_all_projects(base_out_dir: str = "profile", mock: bool = True) -> None:
+def generate_all_projects(base_out_dir: str = "profile", mock: bool = True, data: dict = None) -> None:
     """Generate all 6 project cards."""
+
+    # Extract project_stars from data, fall back to all None if not provided
+    project_stars = {}
+    if data and "project_stars" in data:
+        project_stars = data["project_stars"]
 
     projects = [
         (
@@ -236,7 +259,8 @@ def generate_all_projects(base_out_dir: str = "profile", mock: bool = True) -> N
 
     for project_key, title, desc, chips, color in projects:
         out_path = os.path.join(base_out_dir, f"project-{project_key}.svg")
-        generate_project_card(project_key, title, desc, chips, color, out_path)
+        star_count = project_stars.get(project_key)
+        generate_project_card(project_key, title, desc, chips, color, out_path, star_count)
 
 
 def main():

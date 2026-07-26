@@ -267,11 +267,11 @@ def generate_svg(data: Dict[str, Any], output_path: str) -> None:
             f'width="40" height="20" rx="3" fill="{PALETTE["teal"]}" opacity="0.9"/>'
         )
 
-        # Peak value text
+        # Peak value text (using bg color for contrast on teal background)
         svg_content += (
             f'\n  <text x="{peak_label_x + 2:.1f}" y="{peak_label_y:.1f}" '
             f'font-family="{FONT}" font-size="11" font-weight="600" '
-            f'fill="#1a1b27" text-anchor="middle">{int(peak_value)}</text>'
+            f'fill="{PALETTE["bg"]}" text-anchor="middle">{int(peak_value)}</text>'
         )
 
     # Draw X-axis month labels

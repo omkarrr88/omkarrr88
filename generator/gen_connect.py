@@ -14,7 +14,7 @@ Contract:
 import argparse
 import os
 import xml.dom.minidom
-from theme import PALETTE, FONT, esc
+from theme import PALETTE, FONT, esc, get_brand_hex
 from icons import ICONS
 
 
@@ -90,7 +90,8 @@ g {
         icon_d = icon.get("d", "")
 
     if icon_d:
-        svg += f'<g transform="translate({icon_x},{icon_y}) scale(0.833)"><path d="{icon_d}" fill="#{icon_hex}"/></g>\n'
+        adjusted_hex = get_brand_hex(icon_hex)
+        svg += f'<g transform="translate({icon_x},{icon_y}) scale(0.833)"><path d="{icon_d}" fill="#{adjusted_hex}"/></g>\n'
 
     # Label text
     text_x = padding_h + icon_size + gap
