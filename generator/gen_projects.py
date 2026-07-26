@@ -235,17 +235,17 @@ def generate_all_projects(base_out_dir: str = "profile", mock: bool = True, data
             "73daca",  # teal
         ),
         (
+            "vayunetra",
+            "VayuNetra",
+            "Six-agent AI platform tracing urban PM2.5 to its sources — sensors, satellite and weather fused into one loop.",
+            [("LangChain", "langchain", False), ("React", "react", False), ("RAG", "python", True)],
+            "ff9e64",  # orange
+        ),
+        (
             "movie-recommender",
             "Movie Recommender",
             "Collaborative-filtering recommender with NLTK sentiment analysis. React front-end, Flask back-end.",
             [("Python", "python", False), ("Flask", "flask", False), ("React", "react", False)],
-            "ff9e64",  # orange
-        ),
-        (
-            "face-attendance",
-            "Face Recognition Attendance",
-            "Marks attendance from a camera feed with face recognition; records in MySQL, exported reports.",
-            [("OpenCV", "opencv", False), ("Python", "python", False), ("MySQL", "mysql", False)],
             "9ece6a",  # green
         ),
         (

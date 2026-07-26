@@ -521,7 +521,7 @@ def _get_all_project_stars() -> Dict[str, Optional[int]]:
         "smart-puc": "omkarrr88/Smart_PUC",
         "v2v": "omkarrr88/V2V",
         "movie-recommender": "omkarrr88/movie-recommendation-system",
-        "face-attendance": "omkarrr88/face-recognition-attendance-system",
+        "vayunetra": "omkarrr88/VayuNetra",
         "fitness-tracker": "omkarrr88/Fitness-Tracker",
     }
 
@@ -586,7 +586,7 @@ def load(mock: bool = False) -> Dict[str, Any]:
                 "smart-puc": 8,
                 "v2v": 5,
                 "movie-recommender": 3,
-                "face-attendance": 2,
+                "vayunetra": 2,
                 "fitness-tracker": 4,
             },
         }
