@@ -1,0 +1,85 @@
+<svg width="920" height="160" viewBox="0 0 920 160" xmlns="http://www.w3.org/2000/svg">
+<style>@keyframes fadeInUp {
+  from {
+    transform: translateY(6px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes type-0 {
+  0% { opacity: 0; }
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  16% { opacity: 1; }
+  25% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes type-1 {
+  0% { opacity: 0; }
+  25% { opacity: 0; }
+  35% { opacity: 1; }
+  41% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes type-2 {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  60% { opacity: 1; }
+  66% { opacity: 1; }
+  75% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes type-3 {
+  0% { opacity: 0; }
+  75% { opacity: 0; }
+  85% { opacity: 1; }
+  91% { opacity: 1; }
+  100% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.cursor { animation: blink 1s infinite; }
+.pulse-dot { animation: pulse 2s infinite; }
+.phrase-0 { animation: type-0 12s linear infinite; }
+.phrase-1 { animation: type-1 12s linear infinite; }
+.phrase-2 { animation: type-2 12s linear infinite; }
+.phrase-3 { animation: type-3 12s linear infinite; }</style>
+<defs>
+<linearGradient id="nameGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+  <stop offset="0%" style="stop-color:#7aa2f7;stop-opacity:0.6" />
+  <stop offset="100%" style="stop-color:#bb9af7;stop-opacity:0.6" />
+</linearGradient>
+</defs>
+<text x="18" y="48" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="20" font-weight="400" fill="#2f334d" opacity="0.6">&lt;/&gt;</text>
+<text x="872" y="48" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="20" font-weight="400" fill="#2f334d" opacity="0.6">{}</text>
+<text x="65" y="50" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="32" font-weight="700" fill="#7aa2f7">Omkar Kadam</text>
+<rect x="65" y="58" width="280" height="3" fill="url(#nameGradient)" rx="1.5"/>
+<g class="typing-container">
+<text x="65" y="105" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="13" font-weight="400" fill="#7dcfff" class="phrase-0" style="opacity: 1; animation: none;">Platform Engineer @ Riamona</text>
+<text x="65" y="105" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="13" font-weight="400" fill="#7dcfff" class="phrase-1" style="opacity: 0; animation: none;">Full-Stack Developer - React | Node | Python</text>
+<text x="65" y="105" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="13" font-weight="400" fill="#7dcfff" class="phrase-2" style="opacity: 0; animation: none;">ML Enthusiast &amp; Automation Builder</text>
+<text x="65" y="105" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="13" font-weight="400" fill="#7dcfff" class="phrase-3" style="opacity: 0; animation: none;">IT Engineer - Mumbai University '26</text>
+<rect x="580" y="90" width="2.5" height="18" fill="#7aa2f7" class="cursor"/>
+</g>
+<circle cx="65" cy="135" r="3.5" fill="#9ece6a" class="pulse-dot"/>
+<text x="75" y="140" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" font-weight="500" fill="#8a93b2">Available for work</text>
+<text x="65" y="155" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" font-weight="400" fill="#8a93b2">📍 Navi Mumbai, India</text>
+</svg>

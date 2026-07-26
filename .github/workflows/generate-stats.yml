@@ -21,31 +21,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Ensure profile directory exists
-        run: mkdir -p profile
+      - name: Generate all profile cards (bespoke generator)
+        # PAT_1 (repo secret, classic token) is required for private
+        # contribution counts and full calendar data; the built-in
+        # GITHUB_TOKEN cannot read user-level data.
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_1 || secrets.GITHUB_TOKEN }}
+        run: python3 generator/generate_all.py
 
-      - name: Generate GitHub Stats Card (tokyonight)
-        uses: soulteary/github-readme-stats-action@v1.0.0
-        with:
-          card: stats
-          options: 'username=${{ github.repository_owner }}&show_icons=true&theme=tokyonight&hide_border=true&card_width=500&count_private=true&include_all_commits=true'
-          path: profile/stats.svg
-          # PAT_1 (repo secret) is required for contribution stats;
-          # the built-in GITHUB_TOKEN cannot read user-level data.
-          token: ${{ secrets.PAT_1 || secrets.GITHUB_TOKEN }}
-
-      - name: Generate Top Languages Card (tokyonight)
-        uses: soulteary/github-readme-stats-action@v1.0.0
-        with:
-          card: top-langs
-          options: 'username=${{ github.repository_owner }}&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&card_width=500'
-          path: profile/languages.svg
-          token: ${{ secrets.PAT_1 || secrets.GITHUB_TOKEN }}
-
-      - name: Commit and push generated stats
+      - name: Commit and push generated cards
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add profile/
-          git commit -m "chore: update github stats" || exit 0
+          git commit -m "chore: update github stats [skip ci]" || exit 0
           git push
