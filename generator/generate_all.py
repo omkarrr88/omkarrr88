@@ -28,12 +28,15 @@ import gen_header
 import gen_stats
 import gen_languages
 import gen_streak
+import gen_weekday
 import gen_activity
 import gen_achievements
 import gen_connect
 import gen_projects
 import gen_tech
 import gen_sections
+import gen_trophies
+import gen_growth
 
 
 def render_all(data: Dict[str, Any], out_dir: str = "profile", theme: str = "dark") -> Tuple[int, List[Tuple[str, bool, str]]]:
@@ -64,6 +67,9 @@ def render_all(data: Dict[str, Any], out_dir: str = "profile", theme: str = "dar
         ("stats", gen_stats, lambda data, path: gen_stats.render(data, path), f"{out_dir}/stats.svg"),
         ("languages", gen_languages, lambda data, path: gen_languages.render(data, path), f"{out_dir}/languages.svg"),
         ("streak", gen_streak, lambda data, path: gen_streak.render(data, path), f"{out_dir}/streak.svg"),
+        ("weekday", gen_weekday, lambda data, path: gen_weekday.render(data, path), f"{out_dir}/weekday.svg"),
+        ("trophies", gen_trophies, lambda data, path: gen_trophies.render(data, path), f"{out_dir}/trophies.svg"),
+        ("growth", gen_growth, lambda data, path: gen_growth.render(data, path), f"{out_dir}/growth.svg"),
         ("activity", gen_activity, lambda data, path: gen_activity.render(data, path), f"{out_dir}/activity.svg"),
         ("achievements", gen_achievements, lambda data, path: gen_achievements.render(data, path), f"{out_dir}/achievements.svg"),
     ]
@@ -179,6 +185,34 @@ def main():
     except Exception as e:
         print(f"✗ Failed to load data: {e}")
         return 1
+
+
+    # Append today's snapshot to the growth history (real runs only; mock
+    # runs must stay deterministic and never dirty the repo)
+    if not args.mock:
+        try:
+            import json as _json
+            from datetime import datetime as _dt, timezone as _tz
+            hist_path = os.path.join(args.out_dir, "history.json")
+            try:
+                with open(hist_path) as _f:
+                    history = _json.load(_f)
+            except Exception:
+                history = []
+            today = _dt.now(_tz.utc).date().isoformat()
+            if not any(e.get("date") == today for e in history):
+                history.append({
+                    "date": today,
+                    "followers": data.get("user", {}).get("followers", 0),
+                    "stars": data.get("stats", {}).get("stars", 0),
+                    "contributions": data.get("streak", {}).get("total", 0),
+                })
+                history.sort(key=lambda e: e["date"])
+                with open(hist_path, "w") as _f:
+                    _json.dump(history, _f, indent=1)
+                print(f"✓ History snapshot appended for {today} ({len(history)} total)")
+        except Exception as e:
+            print(f"! History append failed (non-fatal): {e}")
 
     print()
 

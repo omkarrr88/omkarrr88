@@ -77,6 +77,13 @@ I'm an **IT Engineer** (BE, Terna Engineering College — Mumbai University, 202
   <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/achievements.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/achievements.svg"><img width="49%" src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/achievements.svg" alt="Achievements"></picture>
 </p>
 <p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/weekday.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/weekday.svg"><img width="49%" src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/weekday.svg" alt="Contributions by weekday"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/growth.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/growth.svg"><img width="49%" src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/growth.svg" alt="Follower, star and contribution growth over time"></picture>
+</p>
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/trophies.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/trophies.svg"><img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/trophies.svg" alt="Trophy case — tiered achievements from live GitHub stats"></picture>
+</p>
+<p align="center">
   <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/activity.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/activity.svg"><img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/activity.svg" alt="Contribution activity graph"></picture>
 </p>
 

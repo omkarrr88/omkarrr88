@@ -1,0 +1,90 @@
+<svg width="920" height="210" viewBox="0 0 920 210" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="919" height="209" rx="10" fill="#1a1b27" stroke="#2f334d" stroke-width="1"/>
+<style>
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.tile {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.tile-0 { animation-delay: 0ms; }
+.tile-1 { animation-delay: 60ms; }
+.tile-2 { animation-delay: 120ms; }
+.tile-3 { animation-delay: 180ms; }
+.tile-4 { animation-delay: 240ms; }
+.tile-5 { animation-delay: 300ms; }
+</style>
+<g>
+<path d="M3 2h18v4h-2v2c0 1.1-.9 2-2 2h-2v6h2v2h-12v-2h2v-6h-2c-1.1 0-2-.9-2-2v-2h-2v-4zm8 10h-4v6h4v-6z" fill="#7aa2f7" transform="translate(22,18)" width="24" height="24"/>
+<text x="54" y="30" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="16" font-weight="600" fill="#7aa2f7">Trophies</text>
+</g>
+  <g class="tile tile-0">
+    <circle cx="95.0" cy="74" r="8" fill="#e0af68"/>
+    <path d="M 91.0 64 L 89.0 62 L 90.0 68" fill="#e0af68"/>
+    <path d="M 99.0 64 L 101.0 62 L 100.0 68" fill="#e0af68"/>
+    <text x="95.0" y="102" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="18" font-weight="700" fill="#c0caf5" text-anchor="middle">1.0k</text>
+    <text x="95.0" y="120" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle" text-overflow="ellipsis">Contributions</text>
+    <rect x="79.76" y="124" width="30.48" height="14" rx="4" fill="#16161e" stroke="#e0af68" stroke-width="1" opacity="0.7"/>
+    <text x="95.0" y="134" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="9" font-weight="600" fill="#e0af68" text-anchor="middle">GOLD</text>
+    <rect x="24.0" y="168" width="142.0" height="3" rx="1.5" fill="#16161e"/>
+    <rect x="24.0" y="168" width="0.0" height="3" rx="1.5" fill="#e0af68"/>
+  </g>
+  <g class="tile tile-1">
+    <circle cx="241.0" cy="74" r="8" fill="#a8b2c8"/>
+    <path d="M 237.0 64 L 235.0 62 L 236.0 68" fill="#a8b2c8"/>
+    <path d="M 245.0 64 L 247.0 62 L 246.0 68" fill="#a8b2c8"/>
+    <text x="241.0" y="102" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="18" font-weight="700" fill="#c0caf5" text-anchor="middle">23</text>
+    <text x="241.0" y="120" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle" text-overflow="ellipsis">Longest Streak</text>
+    <rect x="219.64" y="124" width="42.72" height="14" rx="4" fill="#16161e" stroke="#a8b2c8" stroke-width="1" opacity="0.7"/>
+    <text x="241.0" y="134" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="9" font-weight="600" fill="#a8b2c8" text-anchor="middle">SILVER</text>
+    <rect x="170.0" y="168" width="142.0" height="3" rx="1.5" fill="#16161e"/>
+    <rect x="170.0" y="168" width="79.52" height="3" rx="1.5" fill="#a8b2c8"/>
+  </g>
+  <g class="tile tile-2">
+    <circle cx="387.0" cy="74" r="8" fill="#b87333"/>
+    <path d="M 383.0 64 L 381.0 62 L 382.0 68" fill="#b87333"/>
+    <path d="M 391.0 64 L 393.0 62 L 392.0 68" fill="#b87333"/>
+    <text x="387.0" y="102" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="18" font-weight="700" fill="#c0caf5" text-anchor="middle">11</text>
+    <text x="387.0" y="120" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle" text-overflow="ellipsis">Pull Requests</text>
+    <rect x="365.64" y="124" width="42.72" height="14" rx="4" fill="#16161e" stroke="#b87333" stroke-width="1" opacity="0.7"/>
+    <text x="387.0" y="134" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="9" font-weight="600" fill="#b87333" text-anchor="middle">BRONZE</text>
+    <rect x="316.0" y="168" width="142.0" height="3" rx="1.5" fill="#16161e"/>
+    <rect x="316.0" y="168" width="8.52" height="3" rx="1.5" fill="#b87333"/>
+  </g>
+  <g class="tile tile-3">
+    <circle cx="533.0" cy="74" r="8" fill="#b87333"/>
+    <path d="M 529.0 64 L 527.0 62 L 528.0 68" fill="#b87333"/>
+    <path d="M 537.0 64 L 539.0 62 L 538.0 68" fill="#b87333"/>
+    <text x="533.0" y="102" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="18" font-weight="700" fill="#c0caf5" text-anchor="middle">296</text>
+    <text x="533.0" y="120" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle" text-overflow="ellipsis">Commits</text>
+    <rect x="511.64" y="124" width="42.72" height="14" rx="4" fill="#16161e" stroke="#b87333" stroke-width="1" opacity="0.7"/>
+    <text x="533.0" y="134" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="9" font-weight="600" fill="#b87333" text-anchor="middle">BRONZE</text>
+    <rect x="462.0" y="168" width="142.0" height="3" rx="1.5" fill="#16161e"/>
+    <rect x="462.0" y="168" width="69.58" height="3" rx="1.5" fill="#b87333"/>
+  </g>
+  <g class="tile tile-4">
+    <circle cx="679.0" cy="74" r="8" fill="#b87333"/>
+    <path d="M 675.0 64 L 673.0 62 L 674.0 68" fill="#b87333"/>
+    <path d="M 683.0 64 L 685.0 62 L 684.0 68" fill="#b87333"/>
+    <text x="679.0" y="102" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="18" font-weight="700" fill="#c0caf5" text-anchor="middle">9</text>
+    <text x="679.0" y="120" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle" text-overflow="ellipsis">Total Stars</text>
+    <rect x="657.64" y="124" width="42.72" height="14" rx="4" fill="#16161e" stroke="#b87333" stroke-width="1" opacity="0.7"/>
+    <text x="679.0" y="134" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="9" font-weight="600" fill="#b87333" text-anchor="middle">BRONZE</text>
+    <rect x="608.0" y="168" width="142.0" height="3" rx="1.5" fill="#16161e"/>
+    <rect x="608.0" y="168" width="56.8" height="3" rx="1.5" fill="#b87333"/>
+  </g>
+  <g class="tile tile-5">
+    <circle cx="825.0" cy="74" r="8" fill="#6b7089"/>
+    <path d="M 821.0 64 L 819.0 62 L 820.0 68" fill="#6b7089"/>
+    <path d="M 829.0 64 L 831.0 62 L 830.0 68" fill="#6b7089"/>
+    <text x="825.0" y="102" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="18" font-weight="700" fill="#c0caf5" text-anchor="middle">4</text>
+    <text x="825.0" y="120" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle" text-overflow="ellipsis">Followers</text>
+    <rect x="809.76" y="124" width="30.48" height="14" rx="4" fill="#16161e" stroke="#6b7089" stroke-width="1" opacity="0.7"/>
+    <text x="825.0" y="134" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="9" font-weight="600" fill="#6b7089" text-anchor="middle">IRON</text>
+    <rect x="754.0" y="168" width="142.0" height="3" rx="1.5" fill="#16161e"/>
+    <rect x="754.0" y="168" width="113.6" height="3" rx="1.5" fill="#6b7089"/>
+  </g>
+</svg>
