@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """
 Tech Stack SVG generator for GitHub profile.
-Creates a comprehensive technology stack panel with organized groups.
+
+Spec-sheet layout: a left column of accent-colored group labels with chip
+rows flowing to the right, thin dividers between groups. No in-card title —
+the README's section banner carries it.
 
 Contract:
   --mock: Use static mock data (default True)
@@ -11,235 +14,201 @@ Contract:
 import argparse
 import os
 import xml.dom.minidom
-from typing import List, Tuple, Dict, Any
-from theme import PALETTE, FONT, MONO, esc, card_frame, styles, text_width, title_row, get_brand_hex
+from typing import Dict, List, Tuple
+
+from theme import PALETTE, FONT, esc, card_frame, styles, text_width
 from icons import ICONS
 
-
-def measure_text_width(text: str, font_size: int = 13) -> float:
-    """Estimate text width via the shared per-character table in theme."""
-    return text_width(text, font_size)
-
-
-def wrap_chips(
-    chips: List[Tuple[str, str, str]],  # (name, icon_key, display_hex)
-    max_width: int = 876,
-    chip_padding: int = 16,
-    gap: int = 8,
-) -> List[List[Tuple[str, str, str]]]:
-    """
-    Wrap chips into rows based on available width.
-    Returns list of rows, each row is list of (name, icon_key, display_hex).
-    """
-    rows = []
-    current_row = []
-    current_width = 0
-
-    for chip in chips:
-        name, icon_key, display_hex = chip
-        # Estimate: icon (16px) + gap (4px) + text width + padding (16px) = total
-        chip_width = 16 + 4 + measure_text_width(name, 13) + chip_padding
-
-        if current_width + chip_width + gap <= max_width and current_row:
-            current_row.append(chip)
-            current_width += chip_width + gap
-        elif current_row:
-            rows.append(current_row)
-            current_row = [chip]
-            current_width = chip_width
-        else:
-            current_row = [chip]
-            current_width = chip_width
-
-    if current_row:
-        rows.append(current_row)
-
-    return rows
+WIDTH = 920
+PAD_X = 22
+PAD_TOP = 24
+PAD_BOTTOM = 24
+LABEL_COL_W = 148          # left column reserved for group labels
+CHIP_X0 = PAD_X + LABEL_COL_W
+CHIP_MAX_X = WIDTH - PAD_X
+CHIP_H = 28
+CHIP_GAP = 8
+ROW_STEP = CHIP_H + CHIP_GAP
+GROUP_SPACING = 16         # gap above/below each divider
 
 
-def render_chip(name: str, icon_key: str, display_hex: str, x: int, y: int) -> str:
-    """Render a single technology chip with icon and label."""
-    # Chip dimensions
-    chip_height = 24
-    chip_padding_h = 8
-    text_width = measure_text_width(name, 13)
-    chip_width = 16 + 4 + text_width + chip_padding_h
+def chip_width(name: str) -> float:
+    """pad(8) + icon(18) + gap(6) + text + pad(10)."""
+    return 42 + text_width(name, 13.5)
 
-    # Get icon
+
+def render_chip(name: str, icon_key: str, display_hex: str, accent: str, x: float, y: float) -> str:
     icon = ICONS.get(icon_key, {})
     icon_d = icon.get("d", "")
-    icon_hex = icon.get("hex", "999999")
-    if display_hex and display_hex != icon_hex:
-        icon_hex = display_hex
+    icon_hex = display_hex or icon.get("hex", "999999")
+    w = chip_width(name)
 
-    # Rounded rect background
-    svg = f'<rect x="{x}" y="{y}" width="{chip_width}" height="{chip_height}" rx="12" fill="{PALETTE["bg_deep"]}" stroke="{PALETTE["border"]}" stroke-width="1"/>'
-
-    # Icon (16x16, positioned at x+4)
-    icon_x = x + 4
-    icon_y = y + 4
+    svg = (
+        f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{CHIP_H}" rx="14" '
+        f'fill="{PALETTE["bg_deep"]}" stroke="{accent}" stroke-opacity="0.35" stroke-width="1"/>'
+    )
     if icon_d:
-        adjusted_hex = get_brand_hex(icon_hex)
-        svg += f'<g transform="translate({icon_x},{icon_y}) scale(0.667)"><path d="{icon_d}" fill="#{adjusted_hex}"/></g>'
-
-    # Text label
-    text_x = x + 16 + 4 + 4  # icon + gap + padding
-    text_y = y + 16  # vertical center
-    svg += f'<text x="{text_x}" y="{text_y}" font-family="{FONT}" font-size="13" fill="{PALETTE["text"]}">{esc(name)}</text>'
-
+        svg += (
+            f'<g transform="translate({x + 8:.1f},{y + 5:.1f}) scale(0.75)">'
+            f'<path d="{icon_d}" fill="#{icon_hex}"/></g>'
+        )
+    svg += (
+        f'<text x="{x + 32:.1f}" y="{y + 19:.1f}" font-family="{FONT}" font-size="13.5" '
+        f'fill="{PALETTE["text"]}">{esc(name)}</text>'
+    )
     return svg
 
 
-def render(data: dict, out_path: str) -> None:
-    """
-    Render tech SVG (orchestrator interface).
+def wrap_rows(chips: List[Tuple[str, str, str]]) -> List[List[Tuple[str, str, str]]]:
+    """Wrap chips into rows fitting between CHIP_X0 and CHIP_MAX_X."""
+    rows: List[List[Tuple[str, str, str]]] = []
+    row: List[Tuple[str, str, str]] = []
+    x = CHIP_X0
+    for chip in chips:
+        w = chip_width(chip[0])
+        if row and x + w > CHIP_MAX_X:
+            rows.append(row)
+            row = [chip]
+            x = CHIP_X0 + w + CHIP_GAP
+        else:
+            row.append(chip)
+            x += w + CHIP_GAP
+    if row:
+        rows.append(row)
+    return rows
 
-    Args:
-        data: Shared data dict (unused for tech, always static)
-        out_path: Path to write SVG file
-    """
+
+def render(data: dict, out_path: str) -> None:
+    """Render tech SVG (orchestrator interface)."""
     generate_tech(out_path, mock=False)
 
 
 def generate_tech(out_path: str, mock: bool = True) -> None:
-    """
-    Generate tech stack SVG with organized groups.
-
-    Args:
-        out_path: Path to write SVG file
-        mock: Whether to use mock data (always True, static content)
-    """
-
-    # Tech stack organized by category
+    # (name, icon_key, display_hex) — display_hex "" means use brand hex
     tech_groups: Dict[str, List[Tuple[str, str, str]]] = {
         "Languages": [
-            ("Python", "python", "3776AB"),
-            ("TypeScript", "typescript", "3178C6"),
-            ("JavaScript", "javascript", "F7DF1E"),
-            ("Java", "openjdk", "437291"),
-            ("SQL", "postgresql", "4169E1"),
+            ("Python", "python", ""),
+            ("TypeScript", "typescript", ""),
+            ("JavaScript", "javascript", ""),
+            ("Java", "openjdk", ""),
+            ("SQL", "postgresql", ""),
         ],
         "Frontend": [
-            ("React", "react", "61DAFB"),
-            ("Next.js", "nextdotjs", "000000"),
-            ("Vite", "vite", "646CFF"),
-            ("Tailwind CSS", "tailwindcss", "06B6D4"),
+            ("React", "react", ""),
+            ("Next.js", "nextdotjs", ICONS.get("nextdotjs", {}).get("display_hex", "")),
+            ("Vite", "vite", ""),
+            ("Tailwind CSS", "tailwindcss", ""),
         ],
         "Backend & APIs": [
-            ("Node.js", "nodedotjs", "5FA04E"),
-            ("Express", "express", "000000"),
-            ("NestJS", "nestjs", "E0234E"),
-            ("Flask", "flask", "000000"),
-            ("FastAPI", "fastapi", "009688"),
-            ("GraphQL", "graphql", "E10098"),
+            ("Node.js", "nodedotjs", ""),
+            ("Express", "express", ICONS.get("express", {}).get("display_hex", "")),
+            ("NestJS", "nestjs", ""),
+            ("Flask", "flask", ICONS.get("flask", {}).get("display_hex", "")),
+            ("FastAPI", "fastapi", ""),
+            ("GraphQL", "graphql", ""),
         ],
         "ML & Data": [
-            ("PyTorch", "pytorch", "EE4C2C"),
-            ("TensorFlow", "tensorflow", "FF6F00"),
-            ("Scikit-learn", "scikitlearn", "F7931E"),
-            ("OpenCV", "opencv", "5C3EE8"),
-            ("Pandas", "pandas", "150458"),
-            ("NumPy", "numpy", "013243"),
+            ("PyTorch", "pytorch", ""),
+            ("TensorFlow", "tensorflow", ""),
+            ("Scikit-learn", "scikitlearn", ""),
+            ("OpenCV", "opencv", ""),
+            ("Pandas", "pandas", ICONS.get("pandas", {}).get("display_hex", "")),
+            ("NumPy", "numpy", ICONS.get("numpy", {}).get("display_hex", "")),
         ],
         "Databases & Cloud": [
-            ("PostgreSQL", "postgresql", "4169E1"),
-            ("MySQL", "mysql", "00758F"),
-            ("MongoDB", "mongodb", "13AA52"),
-            ("Prisma", "prisma", "2D3748"),
-            ("Supabase", "supabase", "3ECF8E"),
-            ("Redis", "redis", "DC382D"),
-            ("Docker", "docker", "2496ED"),
-            ("Railway", "railway", "0B0D0E"),
-            ("Google Cloud", "googlecloud", "4285F4"),
-            ("Git", "git", "F1502F"),
+            ("PostgreSQL", "postgresql", ""),
+            ("MySQL", "mysql", ""),
+            ("MongoDB", "mongodb", ""),
+            ("Prisma", "prisma", ICONS.get("prisma", {}).get("display_hex", "")),
+            ("Supabase", "supabase", ""),
+            ("Redis", "redis", ""),
+            ("Docker", "docker", ""),
+            ("Railway", "railway", ICONS.get("railway", {}).get("display_hex", "")),
+            ("Google Cloud", "googlecloud", ""),
+            ("Git", "git", ""),
         ],
     }
+    group_accents = {
+        "Languages": PALETTE["blue"],
+        "Frontend": PALETTE["cyan"],
+        "Backend & APIs": PALETTE["purple"],
+        "ML & Data": PALETTE["orange"],
+        "Databases & Cloud": PALETTE["teal"],
+    }
 
-    width = 920
-    group_gap = 32
-    section_gap = 16
-    padding_x = 22
-    padding_y = 22
+    body = ""
+    y = PAD_TOP
+    names = list(tech_groups.keys())
+    for gi, group in enumerate(names):
+        chips = tech_groups[group]
+        accent = group_accents[group]
+        rows = wrap_rows(chips)
+        block_h = len(rows) * ROW_STEP - CHIP_GAP
 
-    # Calculate total height — must mirror the render loop below exactly:
-    # render starts at y=80; each group adds 18+section_gap for its label,
-    # 32 per chip row, then (group_gap - section_gap) between groups.
-    total_height = 80
-    for group_name, chips in tech_groups.items():
-        rows = wrap_chips(chips, width - padding_x * 2)
-        total_height += 18 + section_gap + len(rows) * 32 + (group_gap - section_gap)
-    total_height -= group_gap - section_gap  # no gap after the last group
-    total_height += padding_y  # bottom padding
+        body += f'\n<g class="grp" style="animation-delay: {gi * 120}ms;">'
 
-    # Create SVG
-    svg_content = card_frame(width, total_height)
+        # Label column: accent dot + uppercase label, vertically centered.
+        # Long labels split at " & " onto two lines to stay inside the column.
+        label_cy = y + block_h / 2
+        label = group.upper()
+        est_w = text_width(label, 11) + len(label) * 1.5  # letter-spacing
+        if est_w > LABEL_COL_W - 50 and " & " in label:
+            head, tail = label.split(" & ", 1)
+            lines = [head, "& " + tail]
+        else:
+            lines = [label]
+        body += f'\n<circle cx="{PAD_X + 4}" cy="{label_cy - 4:.1f}" r="3" fill="{accent}"/>'
+        if len(lines) == 1:
+            body += (
+                f'\n<text x="{PAD_X + 14}" y="{label_cy:.1f}" font-family="{FONT}" font-size="11" '
+                f'font-weight="700" letter-spacing="1.5" fill="{accent}">{esc(lines[0])}</text>'
+            )
+        else:
+            body += (
+                f'\n<text x="{PAD_X + 14}" y="{label_cy - 7:.1f}" font-family="{FONT}" font-size="11" '
+                f'font-weight="700" letter-spacing="1.5" fill="{accent}">{esc(lines[0])}</text>'
+                f'\n<text x="{PAD_X + 14}" y="{label_cy + 8:.1f}" font-family="{FONT}" font-size="11" '
+                f'font-weight="700" letter-spacing="1.5" fill="{accent}">{esc(lines[1])}</text>'
+            )
 
-    # Add CSS for animations
-    # Opacity-only animation: CSS transform keyframes would OVERRIDE the
-    # transform attributes that position the icons (collapsing them to 0,0).
+        # Chip rows
+        ry = y
+        for row in rows:
+            x = CHIP_X0
+            for name, icon_key, display_hex in row:
+                body += "\n" + render_chip(name, icon_key, display_hex, accent, x, ry)
+                x += chip_width(name) + CHIP_GAP
+            ry += ROW_STEP
+        body += "\n</g>"
+
+        y += block_h
+        if gi < len(names) - 1:
+            y += GROUP_SPACING
+            body += (
+                f'\n<line x1="{PAD_X}" y1="{y:.1f}" x2="{WIDTH - PAD_X}" y2="{y:.1f}" '
+                f'stroke="{PALETTE["border"]}" stroke-width="1" opacity="0.6"/>'
+            )
+            y += GROUP_SPACING
+
+    total_height = int(y + PAD_BOTTOM)
+
     css = """
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-g {
+.grp {
+  opacity: 0;
   animation: fadeIn 0.6s ease-out forwards;
 }
 """
-    for i in range(30):  # Support up to 30 groups/rows
-        css += f"g:nth-child({i + 3}) {{ animation-delay: {(i - 2) * 80}ms; }}\n"
+    svg_content = card_frame(WIDTH, total_height) + "\n" + styles(css) + body + "\n</svg>"
 
-    svg_content += "\n" + styles(css)
+    xml.dom.minidom.parseString(svg_content)
 
-    # Icon for title (circuit board icon using lambda-like shape)
-    circuit_icon = "M12 2L4 6v12l8 4 8-4V6l-8-4zm0 2.5L16.5 8v8L12 18 7.5 16V8L12 4.5zm-2 5L12 11l2-1.5v3L12 15l-2-2.5v-3z"
-
-    svg_content += "\n" + title_row(circuit_icon, "Tech Stack", 22, 40)
-
-    # Render groups
-    current_y = 80
-    group_index = 0
-
-    for group_name, chips in tech_groups.items():
-        # Group label
-        svg_content += f'\n<text x="{padding_x}" y="{current_y}" font-family="{FONT}" font-size="12" font-weight="600" fill="{PALETTE["muted"]}" text-transform="uppercase" letter-spacing="1">{esc(group_name)}</text>'
-        current_y += 18 + section_gap
-
-        # Wrap chips
-        rows = wrap_chips(chips, width - padding_x * 2)
-
-        # Render each row
-        for row in rows:
-            row_x = padding_x
-            for name, icon_key, display_hex in row:
-                chip_svg = render_chip(name, icon_key, display_hex, row_x, current_y)
-                svg_content += f"\n{chip_svg}"
-
-                # Estimate chip width for next position
-                chip_width = 16 + 4 + measure_text_width(name, 13) + 8
-                row_x += chip_width + 8  # 8px gap between chips
-
-            current_y += 32  # chip height (24) + gap (8)
-
-        current_y += group_gap - section_gap
-        group_index += 1
-
-    svg_content += "\n</svg>"
-
-    # Validate XML
-    try:
-        xml.dom.minidom.parseString(svg_content)
-    except Exception as e:
-        print(f"✗ XML validation failed: {e}")
-        raise
-
-    # Ensure output directory exists
     os.makedirs(os.path.dirname(out_path) if os.path.dirname(out_path) else ".", exist_ok=True)
-
-    # Write SVG
     with open(out_path, "w") as f:
         f.write(svg_content)
-
     print(f"✓ Tech stack SVG generated: {out_path}")
 
 
@@ -247,15 +216,8 @@ def main():
     parser = argparse.ArgumentParser(description="Generate tech stack SVG for GitHub profile")
     parser.add_argument("--mock", action="store_true", default=True, help="Use mock data (always True)")
     parser.add_argument("--out", type=str, default="profile/tech.svg", help="Output SVG file path")
-
     args = parser.parse_args()
-
-    try:
-        generate_tech(args.out, args.mock)
-        print(f"✓ Successfully created {args.out}")
-    except Exception as e:
-        print(f"✗ Error: {e}")
-        exit(1)
+    generate_tech(args.out, args.mock)
 
 
 if __name__ == "__main__":
