@@ -65,7 +65,7 @@ def render_card(history: List[Dict[str, Any]]) -> str:
     body = card_frame(WIDTH, HEIGHT)
     body += "\n" + styles(
         "@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }\n"
-        ".row { opacity: 0; animation: fadeIn 0.6s ease-out forwards; }\n"
+        ".row { animation: fadeIn 0.6s ease-out backwards; }\n"
         ".row:nth-of-type(2) { animation-delay: 120ms; }\n"
         ".row:nth-of-type(3) { animation-delay: 240ms; }\n"
     )

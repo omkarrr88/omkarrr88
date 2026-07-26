@@ -1,7 +1,7 @@
 <svg width="452" height="210" viewBox="0 0 452 210" xmlns="http://www.w3.org/2000/svg">
 <rect x="0.5" y="0.5" width="451" height="209" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
 <style>@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-.row { opacity: 0; animation: fadeIn 0.6s ease-out forwards; }
+.row { animation: fadeIn 0.6s ease-out backwards; }
 .row:nth-of-type(2) { animation-delay: 120ms; }
 .row:nth-of-type(3) { animation-delay: 240ms; }
 </style>

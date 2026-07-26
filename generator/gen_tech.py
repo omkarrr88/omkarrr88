@@ -198,8 +198,7 @@ def generate_tech(out_path: str, mock: bool = True) -> None:
   to { opacity: 1; }
 }
 .grp {
-  opacity: 0;
-  animation: fadeIn 0.6s ease-out forwards;
+    animation: fadeIn 0.6s ease-out backwards;
 }
 """
     svg_content = card_frame(WIDTH, total_height) + "\n" + styles(css) + body + "\n</svg>"

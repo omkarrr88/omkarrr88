@@ -13,7 +13,7 @@
 
 ---
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-about.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/section-about.svg"><img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-about.svg" alt="About Me"></picture></p>
+<h2 align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-about.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/section-about.svg"><img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-about.svg" alt="About Me"></picture></h2>
 
 I'm an **IT Engineer** (BE, Terna Engineering College — Mumbai University, 2026) working as a **Full Stack Engineer at Riamona Luxury & Fashion Brands**, where I build full-stack products end to end — the code, the tests, the CI/CD, and running them in production.
 
@@ -26,7 +26,7 @@ I'm an **IT Engineer** (BE, Terna Engineering College — Mumbai University, 202
 
 ---
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-connect.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/section-connect.svg"><img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-connect.svg" alt="Connect With Me"></picture></p>
+<h2 align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-connect.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/section-connect.svg"><img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-connect.svg" alt="Connect With Me"></picture></h2>
 
 <p align="center">
   <a href="https://linkedin.com/in/omkarrrr"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/connect-linkedin.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/connect-linkedin.svg"><img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/connect-linkedin.svg" alt="LinkedIn"></picture></a>
@@ -39,7 +39,7 @@ I'm an **IT Engineer** (BE, Terna Engineering College — Mumbai University, 202
 
 ---
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-tech.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/section-tech.svg"><img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-tech.svg" alt="Tech Stack"></picture></p>
+<h2 align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-tech.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/section-tech.svg"><img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-tech.svg" alt="Tech Stack"></picture></h2>
 
 <p align="center">
   <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/tech.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/tech.svg"><img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/tech.svg" alt="Tech stack: Python, TypeScript, JavaScript, Java, React, Next.js, Node.js, FastAPI, PyTorch, PostgreSQL, Docker and more"></picture>
@@ -47,7 +47,7 @@ I'm an **IT Engineer** (BE, Terna Engineering College — Mumbai University, 202
 
 ---
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-projects.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/section-projects.svg"><img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-projects.svg" alt="Featured Projects"></picture></p>
+<h2 align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-projects.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/section-projects.svg"><img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-projects.svg" alt="Featured Projects"></picture></h2>
 
 <p align="center">
   <a href="https://github.com/UjjwalPardeshi/Chakravyuh"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/project-chakravyuh.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/project-chakravyuh.svg"><img width="49%" src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/project-chakravyuh.svg" alt="Chakravyuh — multi-agent RL for UPI fraud detection"></picture></a>
@@ -66,7 +66,7 @@ I'm an **IT Engineer** (BE, Terna Engineering College — Mumbai University, 202
 
 ---
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-stats.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/section-stats.svg"><img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-stats.svg" alt="GitHub Stats"></picture></p>
+<h2 align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-stats.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/section-stats.svg"><img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-stats.svg" alt="GitHub Stats"></picture></h2>
 
 <p align="center">
   <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/stats.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/stats.svg"><img width="49%" src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/stats.svg" alt="GitHub stats"></picture>
@@ -89,7 +89,7 @@ I'm an **IT Engineer** (BE, Terna Engineering College — Mumbai University, 202
 
 ---
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-snake.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/section-snake.svg"><img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-snake.svg" alt="Contribution Snake"></picture></p>
+<h2 align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-snake.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/section-snake.svg"><img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-snake.svg" alt="Contribution Snake"></picture></h2>
 
 <p align="center">
   <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/output/github-contribution-grid-snake-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/output/github-contribution-grid-snake.svg"><img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/output/github-contribution-grid-snake-dark.svg" alt="Contribution snake animation"></picture>

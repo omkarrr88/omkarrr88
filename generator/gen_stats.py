@@ -78,7 +78,7 @@ def generate_stats_svg(data: dict) -> str:
     stars = stats.get("stars", 0)
     commits = stats.get("commits_total", 0)
     prs = stats.get("prs", 0)
-    issues = stats.get("issues", 0)
+    repos = user.get("public_repos", 0)
     contributed_to = stats.get("contributed_to", 0)
     followers = user.get("followers", 0)
 
@@ -87,7 +87,7 @@ def generate_stats_svg(data: dict) -> str:
         ("⭐", "Total Stars", format_number(stars)),
         ("🔨", "Commits", format_number(commits)),
         ("📝", "Pull Requests", format_number(prs)),
-        ("⚠️", "Issues", format_number(issues)),
+        ("📦", "Repositories", format_number(repos)),
         ("🤝", "Contributed To", format_number(contributed_to)),
     ]
 

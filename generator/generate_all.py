@@ -37,6 +37,7 @@ import gen_tech
 import gen_sections
 import gen_trophies
 import gen_growth
+import gen_snake
 
 
 def render_all(data: Dict[str, Any], out_dir: str = "profile", theme: str = "dark") -> Tuple[int, List[Tuple[str, bool, str]]]:
@@ -71,6 +72,7 @@ def render_all(data: Dict[str, Any], out_dir: str = "profile", theme: str = "dar
         ("trophies", gen_trophies, lambda data, path: gen_trophies.render(data, path), f"{out_dir}/trophies.svg"),
         ("growth", gen_growth, lambda data, path: gen_growth.render(data, path), f"{out_dir}/growth.svg"),
         ("activity", gen_activity, lambda data, path: gen_activity.render(data, path), f"{out_dir}/activity.svg"),
+        ("snake", gen_snake, lambda data, path: gen_snake.render(data, path), f"{out_dir}/snake.svg"),
         ("achievements", gen_achievements, lambda data, path: gen_achievements.render(data, path), f"{out_dir}/achievements.svg"),
     ]
 
@@ -200,7 +202,15 @@ def main():
             except Exception:
                 history = []
             today = _dt.now(_tz.utc).date().isoformat()
-            if not any(e.get("date") == today for e in history):
+            # CI-only: local tokens may lack private-contribution visibility
+            # (a local run once recorded 1,014 vs the true 1,478), and only
+            # the Actions classic PAT sees the full calendar.
+            snapshot_ok = (
+                os.environ.get("GITHUB_ACTIONS") == "true"
+                and len(data.get("calendar", [])) >= 300
+                and data.get("streak", {}).get("total", 0) > 0
+            )
+            if snapshot_ok and not any(e.get("date") == today for e in history):
                 history.append({
                     "date": today,
                     "followers": data.get("user", {}).get("followers", 0),

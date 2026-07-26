@@ -37,7 +37,7 @@ TIER_THRESHOLDS = {
     "prs": {"bronze": 10, "silver": 25, "gold": 50, "diamond": 150},
     "commits": {"bronze": 100, "silver": 500, "gold": 1000, "diamond": 5000},
     "stars": {"bronze": 5, "silver": 15, "gold": 50, "diamond": 150},
-    "followers": {"bronze": 5, "silver": 25, "gold": 100, "diamond": 500},
+    "repos": {"bronze": 5, "silver": 15, "gold": 50, "diamond": 150},
 }
 
 
@@ -153,7 +153,7 @@ def generate_trophy_svg(data: dict) -> str:
     prs = stats.get("prs", 0)
     commits = stats.get("commits_total", 0)
     stars = stats.get("stars", 0)
-    followers = user.get("followers", 0)
+    repos = user.get("public_repos", 0)
 
     # Metrics: (name, value, label)
     metrics = [
@@ -162,7 +162,7 @@ def generate_trophy_svg(data: dict) -> str:
         ("prs", prs, "Pull Requests"),
         ("commits", commits, "Commits"),
         ("stars", stars, "Total Stars"),
-        ("followers", followers, "Followers"),
+        ("repos", repos, "Repositories"),
     ]
 
     # CSS: staggered opacity animation

@@ -16,6 +16,7 @@ Contract:
 import os
 import json
 import math
+import time
 import urllib.request
 import urllib.error
 from datetime import datetime, timedelta
@@ -317,18 +318,27 @@ def _get_contributions_calendar(login: str, token: Optional[str] = None) -> List
           }}
         }}
         """
-        result = _graphql_request(query, token)
-        if result and "data" in result:
-            try:
-                weeks = result["data"]["user"]["contributionsCollection"]["contributionCalendar"]["weeks"]
-                for week in weeks:
-                    for day in week.get("contributionDays", []):
-                        calendar.append({
-                            "date": day["date"],
-                            "count": day["contributionCount"],
-                        })
-            except (KeyError, TypeError):
-                pass
+        # A silently-missing year once shipped a wrong total (1,014 vs 1,478)
+        # to the profile: retry each year, and FAIL LOUD if a year never
+        # loads — stale-but-correct committed SVGs beat fresh-but-wrong ones.
+        year_days = None
+        for attempt in range(3):
+            result = _graphql_request(query, token)
+            if result and "data" in result:
+                try:
+                    weeks = result["data"]["user"]["contributionsCollection"]["contributionCalendar"]["weeks"]
+                    year_days = [
+                        {"date": day["date"], "count": day["contributionCount"]}
+                        for week in weeks
+                        for day in week.get("contributionDays", [])
+                    ]
+                    break
+                except (KeyError, TypeError):
+                    year_days = None
+            time.sleep(1 + attempt)
+        if year_days is None:
+            raise RuntimeError(f"contribution calendar fetch failed for {year} after 3 attempts")
+        calendar.extend(year_days)
 
     calendar.sort(key=lambda x: x["date"])
     # drop any future-dated days the API may return for the current year
@@ -546,6 +556,7 @@ def load(mock: bool = False) -> Dict[str, Any]:
                 "name": "Omkar Kadam",
                 "login": login,
                 "followers": 42,
+                "public_repos": 17,
                 "created_at": "2015-08-15T10:30:00Z",
             },
             "stats": {
@@ -597,6 +608,7 @@ def load(mock: bool = False) -> Dict[str, Any]:
             "name": user_info.get("name", login),
             "login": login,
             "followers": user_info.get("followers", 0),
+            "public_repos": user_info.get("public_repos", 0),
             "created_at": user_info.get("created_at", ""),
         }
     else:
@@ -640,9 +652,9 @@ def load(mock: bool = False) -> Dict[str, Any]:
                     "pct": round(pct, 1),
                 })
 
-    # Fallback to mock if critical data missing
-    if not result["calendar"] and token:
-        # Token present but calendar empty; might indicate API failure
+    # Mock calendar ONLY for token-less local runs. With a token, the fetch
+    # either succeeds or raises — mock data must never reach the live profile.
+    if not result["calendar"] and not token:
         mock_calendar = _make_mock_calendar()
         result["calendar"] = mock_calendar
         result["streak"] = _compute_streak_from_calendar(mock_calendar)
