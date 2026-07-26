@@ -79,9 +79,6 @@ I'm an **IT Engineer** (BE, Terna Engineering College — Mumbai University, 202
 <p align="center">
   <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/activity.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/activity.svg"><img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/activity.svg" alt="Contribution activity graph"></picture>
 </p>
-<p align="center">
-  <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/skyline.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/skyline.svg"><img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/skyline.svg" alt="Isometric contribution skyline — 52 weeks of commits as a 3D city"></picture>
-</p>
 
 ---
 

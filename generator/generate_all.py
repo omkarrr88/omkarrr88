@@ -33,7 +33,6 @@ import gen_achievements
 import gen_connect
 import gen_projects
 import gen_tech
-import gen_skyline
 import gen_sections
 
 
@@ -67,7 +66,6 @@ def render_all(data: Dict[str, Any], out_dir: str = "profile", theme: str = "dar
         ("streak", gen_streak, lambda data, path: gen_streak.render(data, path), f"{out_dir}/streak.svg"),
         ("activity", gen_activity, lambda data, path: gen_activity.render(data, path), f"{out_dir}/activity.svg"),
         ("achievements", gen_achievements, lambda data, path: gen_achievements.render(data, path), f"{out_dir}/achievements.svg"),
-        ("skyline", gen_skyline, lambda data, path: gen_skyline.render(data, path), f"{out_dir}/skyline.svg"),
     ]
 
     # Render single-file cards
