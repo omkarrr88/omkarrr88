@@ -58,15 +58,9 @@ def generate_badge(
 
     # CSS for animations
     css = """
-@keyframes fadeInUp {
-  from {
-    transform: translateY(6px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 @keyframes shine {
   0% {
@@ -77,7 +71,7 @@ def generate_badge(
   }
 }
 g {
-  animation: fadeInUp 0.6s ease-out forwards;
+  animation: fadeIn 0.6s ease-out forwards;
 }
 """
     svg += f"<style>{css}</style>\n"
