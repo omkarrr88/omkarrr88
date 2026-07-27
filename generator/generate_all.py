@@ -37,6 +37,7 @@ import gen_tech
 import gen_sections
 import gen_trophies
 import gen_growth
+import gen_terminal
 import gen_snake
 
 
@@ -71,6 +72,7 @@ def render_all(data: Dict[str, Any], out_dir: str = "profile", theme: str = "dar
         ("weekday", gen_weekday, lambda data, path: gen_weekday.render(data, path), f"{out_dir}/weekday.svg"),
         ("trophies", gen_trophies, lambda data, path: gen_trophies.render(data, path), f"{out_dir}/trophies.svg"),
         ("growth", gen_growth, lambda data, path: gen_growth.render(data, path), f"{out_dir}/growth.svg"),
+        ("terminal", gen_terminal, lambda data, path: gen_terminal.render(data, path), f"{out_dir}/terminal.svg"),
         ("activity", gen_activity, lambda data, path: gen_activity.render(data, path), f"{out_dir}/activity.svg"),
         ("snake", gen_snake, lambda data, path: gen_snake.render(data, path), f"{out_dir}/snake.svg"),
         ("achievements", gen_achievements, lambda data, path: gen_achievements.render(data, path), f"{out_dir}/achievements.svg"),

@@ -42,6 +42,7 @@ def generate_header(out_path: str, mock: bool = True, include_animations: bool =
     # Plain characters only — esc() is applied at render time.
     phrases = [
         "Full Stack Engineer @ Riamona",
+        "7th of 31,000+ - Meta PyTorch Hackathon",
         "React | Node | Python | PostgreSQL",
         "ML Enthusiast & Automation Builder",
         "IT Engineer - Mumbai University '26"

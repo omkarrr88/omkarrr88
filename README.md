@@ -15,6 +15,8 @@
 
 <h2 align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-about.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/section-about.svg"><img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/section-about.svg" alt="About Me"></picture></h2>
 
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/terminal.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/light/terminal.svg"><img src="https://raw.githubusercontent.com/omkarrr88/omkarrr88/main/profile/terminal.svg" alt="Terminal intro: whoami — Full Stack Engineer; achievements — 7th of 31,000+ at Meta PyTorch Hackathon, Springer Nature paper, Avishkar finals"></picture></p>
+
 I'm an **IT Engineer** (BE, Terna Engineering College — Mumbai University, 2026) working as a **Full Stack Engineer at Riamona Luxury & Fashion Brands**, where I build full-stack products end to end — the code, the tests, the CI/CD, and running them in production.
 
 - 🔭 **Currently building:** internal SaaS products with React, Node.js, Python, Prisma & PostgreSQL

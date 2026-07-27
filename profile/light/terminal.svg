@@ -1,0 +1,35 @@
+<svg width="920" height="400" viewBox="0 0 920 400" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="919" height="399" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
+<style>@keyframes typeIn { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+.cursor { animation: blink 1.1s infinite; }
+.l0 { animation: typeIn 0.7s steps(6, end) backwards; animation-delay: 0.40s; }
+.l1 { animation: fadeIn 0.15s ease-out backwards; animation-delay: 1.25s; }
+.l2 { animation: typeIn 0.7s steps(16, end) backwards; animation-delay: 1.50s; }
+.l3 { animation: fadeIn 0.15s ease-out backwards; animation-delay: 2.35s; }
+.l4 { animation: fadeIn 0.15s ease-out backwards; animation-delay: 2.60s; }
+.l5 { animation: fadeIn 0.15s ease-out backwards; animation-delay: 2.85s; }
+.l6 { animation: typeIn 0.7s steps(13, end) backwards; animation-delay: 3.10s; }
+.l7 { animation: fadeIn 0.15s ease-out backwards; animation-delay: 3.95s; }
+.l8 { animation: typeIn 0.7s steps(6, end) backwards; animation-delay: 4.20s; }
+.l9 { animation: fadeIn 0.15s ease-out backwards; animation-delay: 5.05s; }
+.lp { animation: fadeIn 0.2s ease-out backwards; animation-delay: 5.30s; }</style>
+<path d="M0.5 36 L0.5 10 Q0.5 0.5 10 0.5 L910 0.5 Q919.5 0.5 919.5 10 L919.5 36 Z" fill="#f3f4f8"/>
+<line x1="0.5" y1="36" x2="919.5" y2="36" stroke="#d0d7de" stroke-width="1"/>
+<circle cx="24" cy="18.0" r="5.5" fill="#c64343"/>
+<circle cx="44" cy="18.0" r="5.5" fill="#b15c00"/>
+<circle cx="64" cy="18.0" r="5.5" fill="#587539"/>
+<text x="460.0" y="22.0" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="12" fill="#6e7781">omkar@github: ~</text>
+<text class="l0" x="26" y="58" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="14"><tspan fill="#587539" font-weight="700">$ </tspan><tspan fill="#24292f">whoami</tspan></text>
+<text class="l1" x="26" y="82" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="13.5" fill="#6e7781">omkar-kadam — Full Stack Engineer @ Riamona Luxury &amp; Fashion Brands</text>
+<text class="l2" x="26" y="130" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="14"><tspan fill="#587539" font-weight="700">$ </tspan><tspan fill="#24292f">ls achievements/</tspan></text>
+<text class="l3" x="26" y="154" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="13.5" fill="#6e7781">meta-pytorch-hackathon/   → 7th of 31,000+ teams (Chakravyuh)</text>
+<text class="l4" x="26" y="178" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="13.5" fill="#6e7781">springer-nature/          → V2V collision-risk paper, in review</text>
+<text class="l5" x="26" y="202" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="13.5" fill="#6e7781">avishkar-2025/            → research finals, Mumbai University</text>
+<text class="l6" x="26" y="250" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="14"><tspan fill="#587539" font-weight="700">$ </tspan><tspan fill="#24292f">cat stack.txt</tspan></text>
+<text class="l7" x="26" y="274" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="13.5" fill="#6e7781">React · Node.js · Python · PostgreSQL · FastAPI · RAG/LLM apps</text>
+<text class="l8" x="26" y="322" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="14"><tspan fill="#587539" font-weight="700">$ </tspan><tspan fill="#24292f">uptime</tspan></text>
+<text class="l9" x="26" y="346" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="13.5" fill="#6e7781">shipping production systems since Jan 2026 — fully unattended</text>
+<g class="lp"><text x="26" y="370" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="14" font-weight="700" fill="#587539">$</text><rect class="cursor" x="42" y="358" width="8" height="15" fill="#3d59a1"/></g>
+</svg>

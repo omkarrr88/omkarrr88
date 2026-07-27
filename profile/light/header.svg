@@ -23,45 +23,55 @@
 @keyframes type-0 {
   0% { opacity: 0; }
   0% { opacity: 0; }
-  10% { opacity: 1; }
-  16% { opacity: 1; }
-  25% { opacity: 0; }
+  8% { opacity: 1; }
+  13% { opacity: 1; }
+  20% { opacity: 0; }
   100% { opacity: 0; }
 }
 
 @keyframes type-1 {
   0% { opacity: 0; }
-  25% { opacity: 0; }
-  35% { opacity: 1; }
-  41% { opacity: 1; }
-  50% { opacity: 0; }
+  20% { opacity: 0; }
+  28% { opacity: 1; }
+  33% { opacity: 1; }
+  40% { opacity: 0; }
   100% { opacity: 0; }
 }
 
 @keyframes type-2 {
   0% { opacity: 0; }
-  50% { opacity: 0; }
-  60% { opacity: 1; }
-  66% { opacity: 1; }
-  75% { opacity: 0; }
+  40% { opacity: 0; }
+  48% { opacity: 1; }
+  53% { opacity: 1; }
+  60% { opacity: 0; }
   100% { opacity: 0; }
 }
 
 @keyframes type-3 {
   0% { opacity: 0; }
-  75% { opacity: 0; }
-  85% { opacity: 1; }
-  91% { opacity: 1; }
+  60% { opacity: 0; }
+  68% { opacity: 1; }
+  73% { opacity: 1; }
+  80% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes type-4 {
+  0% { opacity: 0; }
+  80% { opacity: 0; }
+  88% { opacity: 1; }
+  93% { opacity: 1; }
   100% { opacity: 0; }
   100% { opacity: 0; }
 }
 
 .cursor { animation: blink 1s infinite; }
 .pulse-dot { animation: pulse 2s infinite; }
-.phrase-0 { animation: type-0 12s linear infinite; }
-.phrase-1 { animation: type-1 12s linear infinite; }
-.phrase-2 { animation: type-2 12s linear infinite; }
-.phrase-3 { animation: type-3 12s linear infinite; }</style>
+.phrase-0 { animation: type-0 15s linear infinite; }
+.phrase-1 { animation: type-1 15s linear infinite; }
+.phrase-2 { animation: type-2 15s linear infinite; }
+.phrase-3 { animation: type-3 15s linear infinite; }
+.phrase-4 { animation: type-4 15s linear infinite; }</style>
 <defs>
 <linearGradient id="nameGradient" x1="0%" y1="0%" x2="100%" y2="0%">
   <stop offset="0%" style="stop-color:#3d59a1;stop-opacity:0.6" />
@@ -77,14 +87,18 @@
 <rect x="579" y="92" width="2.5" height="17" fill="#3d59a1" class="cursor"/>
 </g>
 <g class="phrase-1" style="opacity: 0;">
+<text x="460" y="105" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="13" font-weight="400" fill="#0369a1">7th of 31,000+ - Meta PyTorch Hackathon</text>
+<rect x="618" y="92" width="2.5" height="17" fill="#3d59a1" class="cursor"/>
+</g>
+<g class="phrase-2" style="opacity: 0;">
 <text x="460" y="105" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="13" font-weight="400" fill="#0369a1">React | Node | Python | PostgreSQL</text>
 <rect x="599" y="92" width="2.5" height="17" fill="#3d59a1" class="cursor"/>
 </g>
-<g class="phrase-2" style="opacity: 0;">
+<g class="phrase-3" style="opacity: 0;">
 <text x="460" y="105" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="13" font-weight="400" fill="#0369a1">ML Enthusiast &amp; Automation Builder</text>
 <rect x="599" y="92" width="2.5" height="17" fill="#3d59a1" class="cursor"/>
 </g>
-<g class="phrase-3" style="opacity: 0;">
+<g class="phrase-4" style="opacity: 0;">
 <text x="460" y="105" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="13" font-weight="400" fill="#0369a1">IT Engineer - Mumbai University &apos;26</text>
 <rect x="602" y="92" width="2.5" height="17" fill="#3d59a1" class="cursor"/>
 </g>
