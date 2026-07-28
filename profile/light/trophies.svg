@@ -87,13 +87,13 @@
     </circle>
     <path d="M 675.0 64 L 673.0 62 L 674.0 68" fill="#b87333"/>
     <path d="M 683.0 64 L 685.0 62 L 684.0 68" fill="#b87333"/>
-    <text x="679.0" y="102" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="18" font-weight="700" fill="#24292f" text-anchor="middle">9</text>
+    <text x="679.0" y="102" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="18" font-weight="700" fill="#24292f" text-anchor="middle">13</text>
     <text x="679.0" y="120" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#6e7781" text-anchor="middle" text-overflow="ellipsis">Total Stars</text>
     <rect x="657.64" y="124" width="42.72" height="14" rx="4" fill="#f3f4f8" stroke="#b87333" stroke-width="1" opacity="0.7"/>
     <text x="679.0" y="134" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="9" font-weight="600" fill="#b87333" text-anchor="middle">BRONZE</text>
     <rect x="608.0" y="168" width="142.0" height="3" rx="1.5" fill="#f3f4f8"/>
-    <rect x="608.0" y="168" width="56.8" height="3" rx="1.5" fill="#b87333">
-      <animate attributeName="width" from="0" to="56.8" dur="0.9s" begin="0.78s" fill="backwards"/>
+    <rect x="608.0" y="168" width="113.6" height="3" rx="1.5" fill="#b87333">
+      <animate attributeName="width" from="0" to="113.6" dur="0.9s" begin="0.78s" fill="backwards"/>
     </rect>
   </g>
   <g class="tile tile-5">
@@ -102,13 +102,13 @@
     </circle>
     <path d="M 821.0 64 L 819.0 62 L 820.0 68" fill="#a8b2c8"/>
     <path d="M 829.0 64 L 831.0 62 L 830.0 68" fill="#a8b2c8"/>
-    <text x="825.0" y="102" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="18" font-weight="700" fill="#24292f" text-anchor="middle">17</text>
+    <text x="825.0" y="102" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="18" font-weight="700" fill="#24292f" text-anchor="middle">16</text>
     <text x="825.0" y="120" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#6e7781" text-anchor="middle" text-overflow="ellipsis">Repositories</text>
     <rect x="803.64" y="124" width="42.72" height="14" rx="4" fill="#f3f4f8" stroke="#a8b2c8" stroke-width="1" opacity="0.7"/>
     <text x="825.0" y="134" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="9" font-weight="600" fill="#a8b2c8" text-anchor="middle">SILVER</text>
     <rect x="754.0" y="168" width="142.0" height="3" rx="1.5" fill="#f3f4f8"/>
-    <rect x="754.0" y="168" width="7.1" height="3" rx="1.5" fill="#a8b2c8">
-      <animate attributeName="width" from="0" to="7.1" dur="0.9s" begin="0.90s" fill="backwards"/>
+    <rect x="754.0" y="168" width="2.84" height="3" rx="1.5" fill="#a8b2c8">
+      <animate attributeName="width" from="0" to="2.84" dur="0.9s" begin="0.90s" fill="backwards"/>
     </rect>
   </g>
 </svg>
