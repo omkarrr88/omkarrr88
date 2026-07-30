@@ -9,7 +9,23 @@
 <path d="M3 17l6-6 4 4 8-8v5h2V4h-8v2h5l-7 7-4-4-8 8z" fill="#3d59a1" transform="translate(22,18)" width="24" height="24"/>
 <text x="54" y="30" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="16" font-weight="600" fill="#3d59a1">Growth</text>
 </g>
-<text x="226" y="100" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="13" fill="#24292f">Collecting data since 2026-07-26</text>
-<text x="226" y="122" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11.5" fill="#6e7781">Charts appear after 1 more daily snapshot</text>
-<text x="226" y="158" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#6e7781">4/5 snapshots recorded</text>
+<g class="row">
+<text x="22" y="82" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="12" fill="#6e7781">Contributions</text>
+<polyline points="130.0,92.0 180.0,66.0 230.0,66.0 280.0,66.0 330.0,66.0" fill="none" stroke="#3d59a1" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><circle cx="330.0" cy="66.0" r="2.5" fill="#3d59a1"/>
+<text x="386" y="82" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="14" font-weight="700" fill="#24292f">1,495</text>
+<text x="430" y="82" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" font-weight="600" fill="#3d59a1">+17</text>
+</g>
+<g class="row">
+<text x="22" y="126" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="12" fill="#6e7781">Stars</text>
+<polyline points="130.0,136.0 180.0,136.0 230.0,110.0 280.0,110.0 330.0,110.0" fill="none" stroke="#b15c00" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><circle cx="330.0" cy="110.0" r="2.5" fill="#b15c00"/>
+<text x="386" y="126" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="14" font-weight="700" fill="#24292f">13</text>
+<text x="430" y="126" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" font-weight="600" fill="#b15c00">+4</text>
+</g>
+<g class="row">
+<text x="22" y="170" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="12" fill="#6e7781">Followers</text>
+<polyline points="130.0,180.0 180.0,180.0 230.0,154.0 280.0,154.0 330.0,154.0" fill="none" stroke="#0f766e" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><circle cx="330.0" cy="154.0" r="2.5" fill="#0f766e"/>
+<text x="386" y="170" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="14" font-weight="700" fill="#24292f">5</text>
+<text x="430" y="170" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" font-weight="600" fill="#0f766e">+1</text>
+</g>
+<text x="226" y="196" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="10.5" fill="#6e7781">2026-07-26 → 2026-07-30</text>
 </svg>
