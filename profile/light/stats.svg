@@ -81,6 +81,6 @@
 </defs>
 <circle cx="355" cy="105" r="50" fill="none" stroke="#d0d7de" stroke-width="1" opacity="0.3"/>
 <circle style="animation: slideUp 0.6s ease-out forwards; animation-delay: 600ms;" cx="355" cy="105" r="42" fill="none" stroke="url(#ringGradient)" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>
-<text style="animation: popIn 0.5s ease-out forwards; animation-delay: 700ms; transform-origin: center;" x="355" y="102" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="26" font-weight="700" fill="#3d59a1" text-anchor="middle">5</text>
+<text style="animation: popIn 0.5s ease-out forwards; animation-delay: 700ms; transform-origin: center;" x="355" y="102" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="26" font-weight="700" fill="#3d59a1" text-anchor="middle">6</text>
 <text style="animation: slideUp 0.5s ease-out forwards; animation-delay: 600ms;" x="355" y="119" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="10" fill="#6e7781" text-anchor="middle" letter-spacing="0.5">Followers</text>
 </svg>
