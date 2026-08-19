@@ -18,24 +18,24 @@
 <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z" fill="#7aa2f7" transform="translate(22,18)" width="24" height="24"/>
 <text x="54" y="30" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="16" font-weight="600" fill="#7aa2f7">Weekly Rhythm</text>
 </g>
-<rect class="bar" style="animation-delay: 0ms" x="27.0" y="65.52631578947368" width="38" height="99.47368421052632" rx="3" fill="#7aa2f7">
-  <animate attributeName="height" from="0" to="99.47368421052632" dur="0.7s" begin="0.00s" fill="freeze"/>
-  <animate attributeName="y" from="165.0" to="65.52631578947368" dur="0.7s" begin="0.00s" fill="freeze"/>
+<rect class="bar" style="animation-delay: 0ms" x="27.0" y="68.98832684824903" width="38" height="96.01167315175097" rx="3" fill="#7aa2f7">
+  <animate attributeName="height" from="0" to="96.01167315175097" dur="0.7s" begin="0.00s" fill="freeze"/>
+  <animate attributeName="y" from="165.0" to="68.98832684824903" dur="0.7s" begin="0.00s" fill="freeze"/>
 </rect>
 <text x="46.0" y="185" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle">M</text>
-<rect class="bar" style="animation-delay: 80ms" x="75.0" y="95.92105263157895" width="38" height="69.07894736842105" rx="3" fill="#7aa2f7">
-  <animate attributeName="height" from="0" to="69.07894736842105" dur="0.7s" begin="0.08s" fill="freeze"/>
-  <animate attributeName="y" from="165.0" to="95.92105263157895" dur="0.7s" begin="0.08s" fill="freeze"/>
+<rect class="bar" style="animation-delay: 80ms" x="75.0" y="87.37354085603113" width="38" height="77.62645914396887" rx="3" fill="#7aa2f7">
+  <animate attributeName="height" from="0" to="77.62645914396887" dur="0.7s" begin="0.08s" fill="freeze"/>
+  <animate attributeName="y" from="165.0" to="87.37354085603113" dur="0.7s" begin="0.08s" fill="freeze"/>
 </rect>
 <text x="94.0" y="185" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle">T</text>
-<rect class="bar" style="animation-delay: 160ms" x="123.0" y="68.28947368421053" width="38" height="96.71052631578947" rx="3" fill="#7aa2f7">
-  <animate attributeName="height" from="0" to="96.71052631578947" dur="0.7s" begin="0.16s" fill="freeze"/>
-  <animate attributeName="y" from="165.0" to="68.28947368421053" dur="0.7s" begin="0.16s" fill="freeze"/>
+<rect class="bar" style="animation-delay: 160ms" x="123.0" y="72.66536964980546" width="38" height="92.33463035019454" rx="3" fill="#7aa2f7">
+  <animate attributeName="height" from="0" to="92.33463035019454" dur="0.7s" begin="0.16s" fill="freeze"/>
+  <animate attributeName="y" from="165.0" to="72.66536964980546" dur="0.7s" begin="0.16s" fill="freeze"/>
 </rect>
 <text x="142.0" y="185" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle">W</text>
-<rect class="bar" style="animation-delay: 240ms" x="171.0" y="65.06578947368422" width="38" height="99.93421052631578" rx="3" fill="#7aa2f7">
-  <animate attributeName="height" from="0" to="99.93421052631578" dur="0.7s" begin="0.24s" fill="freeze"/>
-  <animate attributeName="y" from="165.0" to="65.06578947368422" dur="0.7s" begin="0.24s" fill="freeze"/>
+<rect class="bar" style="animation-delay: 240ms" x="171.0" y="75.11673151750973" width="38" height="89.88326848249027" rx="3" fill="#7aa2f7">
+  <animate attributeName="height" from="0" to="89.88326848249027" dur="0.7s" begin="0.24s" fill="freeze"/>
+  <animate attributeName="y" from="165.0" to="75.11673151750973" dur="0.7s" begin="0.24s" fill="freeze"/>
 </rect>
 <text x="190.0" y="185" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle">T</text>
 <rect class="bar" style="animation-delay: 320ms" x="219.0" y="60.0" width="38" height="105.0" rx="3" fill="#ff9e64">
@@ -43,15 +43,15 @@
   <animate attributeName="y" from="165.0" to="60.0" dur="0.7s" begin="0.32s" fill="freeze"/>
 </rect>
 <text x="238.0" y="185" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle">F</text>
-<text x="238.0" y="52.0" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" font-weight="600" fill="#ff9e64" text-anchor="middle">228</text>
-<rect class="bar" style="animation-delay: 400ms" x="267.0" y="80.72368421052632" width="38" height="84.27631578947368" rx="3" fill="#7aa2f7">
-  <animate attributeName="height" from="0" to="84.27631578947368" dur="0.7s" begin="0.40s" fill="freeze"/>
-  <animate attributeName="y" from="165.0" to="80.72368421052632" dur="0.7s" begin="0.40s" fill="freeze"/>
+<text x="238.0" y="52.0" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" font-weight="600" fill="#ff9e64" text-anchor="middle">257</text>
+<rect class="bar" style="animation-delay: 400ms" x="267.0" y="89.41634241245136" width="38" height="75.58365758754864" rx="3" fill="#7aa2f7">
+  <animate attributeName="height" from="0" to="75.58365758754864" dur="0.7s" begin="0.40s" fill="freeze"/>
+  <animate attributeName="y" from="165.0" to="89.41634241245136" dur="0.7s" begin="0.40s" fill="freeze"/>
 </rect>
 <text x="286.0" y="185" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle">S</text>
-<rect class="bar" style="animation-delay: 480ms" x="315.0" y="112.03947368421052" width="38" height="52.96052631578947" rx="3" fill="#7aa2f7">
-  <animate attributeName="height" from="0" to="52.96052631578947" dur="0.7s" begin="0.48s" fill="freeze"/>
-  <animate attributeName="y" from="165.0" to="112.03947368421052" dur="0.7s" begin="0.48s" fill="freeze"/>
+<rect class="bar" style="animation-delay: 480ms" x="315.0" y="110.25291828793775" width="38" height="54.74708171206226" rx="3" fill="#7aa2f7">
+  <animate attributeName="height" from="0" to="54.74708171206226" dur="0.7s" begin="0.48s" fill="freeze"/>
+  <animate attributeName="y" from="165.0" to="110.25291828793775" dur="0.7s" begin="0.48s" fill="freeze"/>
 </rect>
 <text x="334.0" y="185" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle">S</text>
 <text x="22" y="200" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89">Most active: </text>
