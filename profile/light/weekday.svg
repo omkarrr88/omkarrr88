@@ -39,14 +39,14 @@
   <animate attributeName="y" from="165.0" to="76.78438661710037" dur="0.7s" begin="0.24s" fill="freeze"/>
 </rect>
 <text x="190.0" y="185" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#6e7781" text-anchor="middle">T</text>
-<rect class="bar" style="animation-delay: 320ms" x="219.0" y="70.14869888475836" width="38" height="94.85130111524164" rx="3" fill="#3d59a1">
-  <animate attributeName="height" from="0" to="94.85130111524164" dur="0.7s" begin="0.32s" fill="freeze"/>
-  <animate attributeName="y" from="165.0" to="70.14869888475836" dur="0.7s" begin="0.32s" fill="freeze"/>
+<rect class="bar" style="animation-delay: 320ms" x="219.0" y="68.97769516728626" width="38" height="96.02230483271374" rx="3" fill="#3d59a1">
+  <animate attributeName="height" from="0" to="96.02230483271374" dur="0.7s" begin="0.32s" fill="freeze"/>
+  <animate attributeName="y" from="165.0" to="68.97769516728626" dur="0.7s" begin="0.32s" fill="freeze"/>
 </rect>
 <text x="238.0" y="185" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#6e7781" text-anchor="middle">F</text>
-<rect class="bar" style="animation-delay: 400ms" x="267.0" y="93.17843866171003" width="38" height="71.82156133828997" rx="3" fill="#3d59a1">
-  <animate attributeName="height" from="0" to="71.82156133828997" dur="0.7s" begin="0.40s" fill="freeze"/>
-  <animate attributeName="y" from="165.0" to="93.17843866171003" dur="0.7s" begin="0.40s" fill="freeze"/>
+<rect class="bar" style="animation-delay: 400ms" x="267.0" y="88.49442379182156" width="38" height="76.50557620817844" rx="3" fill="#3d59a1">
+  <animate attributeName="height" from="0" to="76.50557620817844" dur="0.7s" begin="0.40s" fill="freeze"/>
+  <animate attributeName="y" from="165.0" to="88.49442379182156" dur="0.7s" begin="0.40s" fill="freeze"/>
 </rect>
 <text x="286.0" y="185" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#6e7781" text-anchor="middle">S</text>
 <rect class="bar" style="animation-delay: 480ms" x="315.0" y="112.69516728624535" width="38" height="52.30483271375465" rx="3" fill="#3d59a1">
