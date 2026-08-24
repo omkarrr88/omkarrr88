@@ -11,21 +11,21 @@
 </g>
 <g class="row">
 <text x="22" y="82" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="12" fill="#565f89">Contributions</text>
-<polyline points="130.0,92.0 137.1,91.2 144.3,91.2 151.4,91.2 158.6,91.2 165.7,91.2 172.9,91.2 180.0,91.2 187.1,91.2 194.3,76.1 201.4,76.1 208.6,76.1 215.7,76.1 222.9,76.1 230.0,76.1 237.1,76.1 244.3,76.1 251.4,76.1 258.6,76.1 265.7,76.1 272.9,76.1 280.0,76.1 287.1,76.1 294.3,76.1 301.4,69.5 308.6,67.0 315.7,66.7 322.9,66.7 330.0,66.0" fill="none" stroke="#7aa2f7" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><circle cx="330.0" cy="66.0" r="2.5" fill="#7aa2f7"/>
+<polyline points="130.0,92.0 136.9,91.2 143.8,91.2 150.7,91.2 157.6,91.2 164.5,91.2 171.4,91.2 178.3,91.2 185.2,91.2 192.1,76.1 199.0,76.1 205.9,76.1 212.8,76.1 219.7,76.1 226.6,76.1 233.4,76.1 240.3,76.1 247.2,76.1 254.1,76.1 261.0,76.1 267.9,76.1 274.8,76.1 281.7,76.1 288.6,76.1 295.5,69.5 302.4,67.0 309.3,66.7 316.2,66.7 323.1,66.0 330.0,66.0" fill="none" stroke="#7aa2f7" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><circle cx="330.0" cy="66.0" r="2.5" fill="#7aa2f7"/>
 <text x="386" y="82" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="14" font-weight="700" fill="#c0caf5">2,001</text>
 <text x="430" y="82" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" font-weight="600" fill="#7aa2f7">+523</text>
 </g>
 <g class="row">
 <text x="22" y="126" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="12" fill="#565f89">Stars</text>
-<polyline points="130.0,136.0 137.1,136.0 144.3,110.0 151.4,110.0 158.6,110.0 165.7,110.0 172.9,110.0 180.0,110.0 187.1,110.0 194.3,110.0 201.4,110.0 208.6,110.0 215.7,110.0 222.9,110.0 230.0,110.0 237.1,110.0 244.3,110.0 251.4,110.0 258.6,110.0 265.7,110.0 272.9,110.0 280.0,110.0 287.1,110.0 294.3,110.0 301.4,110.0 308.6,110.0 315.7,110.0 322.9,110.0 330.0,110.0" fill="none" stroke="#ff9e64" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><circle cx="330.0" cy="110.0" r="2.5" fill="#ff9e64"/>
+<polyline points="130.0,136.0 136.9,136.0 143.8,110.0 150.7,110.0 157.6,110.0 164.5,110.0 171.4,110.0 178.3,110.0 185.2,110.0 192.1,110.0 199.0,110.0 205.9,110.0 212.8,110.0 219.7,110.0 226.6,110.0 233.4,110.0 240.3,110.0 247.2,110.0 254.1,110.0 261.0,110.0 267.9,110.0 274.8,110.0 281.7,110.0 288.6,110.0 295.5,110.0 302.4,110.0 309.3,110.0 316.2,110.0 323.1,110.0 330.0,110.0" fill="none" stroke="#ff9e64" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><circle cx="330.0" cy="110.0" r="2.5" fill="#ff9e64"/>
 <text x="386" y="126" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="14" font-weight="700" fill="#c0caf5">13</text>
 <text x="430" y="126" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" font-weight="600" fill="#ff9e64">+4</text>
 </g>
 <g class="row">
 <text x="22" y="170" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="12" fill="#565f89">Followers</text>
-<polyline points="130.0,180.0 137.1,180.0 144.3,167.0 151.4,167.0 158.6,167.0 165.7,167.0 172.9,167.0 180.0,154.0 187.1,154.0 194.3,154.0 201.4,154.0 208.6,154.0 215.7,154.0 222.9,154.0 230.0,154.0 237.1,154.0 244.3,154.0 251.4,154.0 258.6,154.0 265.7,154.0 272.9,154.0 280.0,154.0 287.1,154.0 294.3,154.0 301.4,154.0 308.6,154.0 315.7,154.0 322.9,154.0 330.0,154.0" fill="none" stroke="#73daca" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><circle cx="330.0" cy="154.0" r="2.5" fill="#73daca"/>
+<polyline points="130.0,180.0 136.9,180.0 143.8,167.0 150.7,167.0 157.6,167.0 164.5,167.0 171.4,167.0 178.3,154.0 185.2,154.0 192.1,154.0 199.0,154.0 205.9,154.0 212.8,154.0 219.7,154.0 226.6,154.0 233.4,154.0 240.3,154.0 247.2,154.0 254.1,154.0 261.0,154.0 267.9,154.0 274.8,154.0 281.7,154.0 288.6,154.0 295.5,154.0 302.4,154.0 309.3,154.0 316.2,154.0 323.1,154.0 330.0,154.0" fill="none" stroke="#73daca" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><circle cx="330.0" cy="154.0" r="2.5" fill="#73daca"/>
 <text x="386" y="170" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="14" font-weight="700" fill="#c0caf5">6</text>
 <text x="430" y="170" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" font-weight="600" fill="#73daca">+2</text>
 </g>
-<text x="226" y="196" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="10.5" fill="#565f89">2026-07-26 → 2026-08-23</text>
+<text x="226" y="196" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="10.5" fill="#565f89">2026-07-26 → 2026-08-24</text>
 </svg>
