@@ -1099,7 +1099,7 @@
   <rect id="cell-361" x="836.0" y="85.0" width="12" height="12" rx="2.5" fill="#b5c1ab" stroke="#d0d7de" stroke-width="0.5">
     <animate attributeName="opacity" dur="26s" repeatCount="indefinite" keyTimes="0.000;0.940;0.950;0.970;1.000" values="1;1;0.15;0.15;1"/>
   </rect>
-  <rect id="cell-362" x="836.0" y="100.0" width="12" height="12" rx="2.5" fill="#778e5f" stroke="#d0d7de" stroke-width="0.5">
+  <rect id="cell-362" x="836.0" y="100.0" width="12" height="12" rx="2.5" fill="#587539" stroke="#d0d7de" stroke-width="0.5">
     <animate attributeName="opacity" dur="26s" repeatCount="indefinite" keyTimes="0.000;0.940;0.950;0.970;1.000" values="1;1;0.15;0.15;1"/>
   </rect>
   <rect id="cell-363" x="836.0" y="115.0" width="12" height="12" rx="2.5" fill="#e6e9ee" stroke="#d0d7de" stroke-width="0.5">
@@ -1149,5 +1149,5 @@
     </animateMotion>
   </g>
 </g>
-<text x="460" y="145" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#6e7781" text-anchor="middle">52 weeks · 1,962 contributions</text>
+<text x="460" y="145" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#6e7781" text-anchor="middle">52 weeks · 1,997 contributions</text>
 </svg>
