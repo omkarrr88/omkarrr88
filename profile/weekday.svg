@@ -34,9 +34,9 @@
 </rect>
 <text x="142.0" y="185" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle">W</text>
 <text x="142.0" y="52.0" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" font-weight="600" fill="#ff9e64" text-anchor="middle">269</text>
-<rect class="bar" style="animation-delay: 240ms" x="171.0" y="76.78438661710037" width="38" height="88.21561338289963" rx="3" fill="#7aa2f7">
-  <animate attributeName="height" from="0" to="88.21561338289963" dur="0.7s" begin="0.24s" fill="freeze"/>
-  <animate attributeName="y" from="165.0" to="76.78438661710037" dur="0.7s" begin="0.24s" fill="freeze"/>
+<rect class="bar" style="animation-delay: 240ms" x="171.0" y="82.24907063197026" width="38" height="82.75092936802974" rx="3" fill="#7aa2f7">
+  <animate attributeName="height" from="0" to="82.75092936802974" dur="0.7s" begin="0.24s" fill="freeze"/>
+  <animate attributeName="y" from="165.0" to="82.24907063197026" dur="0.7s" begin="0.24s" fill="freeze"/>
 </rect>
 <text x="190.0" y="185" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle">T</text>
 <rect class="bar" style="animation-delay: 320ms" x="219.0" y="68.97769516728626" width="38" height="96.02230483271374" rx="3" fill="#7aa2f7">
