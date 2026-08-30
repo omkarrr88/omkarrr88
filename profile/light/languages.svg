@@ -16,47 +16,47 @@
 <text x="54" y="30" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="16" font-weight="600" fill="#3d59a1">Top Languages</text>
 </g>
 <g style="animation: slideUp 0.4s ease-out forwards;">
-<rect x="22" y="50" width="195.5770392749245" height="11" fill="#3572A5" rx="2.5"/>
-<rect x="217.5770392749245" y="50" width="78.06646525679758" height="11" fill="#3178c6" rx="2.5"/>
-<rect x="295.6435045317221" y="50" width="61.631419939577036" height="11" fill="#f1e05a" rx="2.5"/>
-<rect x="357.27492447129913" y="50" width="31.637462235649547" height="11" fill="#e34c26" rx="2.5"/>
-<rect x="388.91238670694867" y="50" width="23.00906344410876" height="11" fill="#DA5B0B" rx="2.5"/>
-<rect x="411.92145015105746" y="50" width="18.0785498489426" height="11" fill="#563d7c" rx="2.5"/>
+<rect x="22" y="50" width="187.9919517102616" height="11" fill="#3572A5" rx="2.5"/>
+<rect x="209.9919517102616" y="50" width="74.70422535211267" height="11" fill="#3178c6" rx="2.5"/>
+<rect x="284.69617706237426" y="50" width="61.15895372233401" height="11" fill="#f1e05a" rx="2.5"/>
+<rect x="345.85513078470825" y="50" width="44.32997987927566" height="11" fill="#e34c26" rx="2.5"/>
+<rect x="390.1851106639839" y="50" width="22.16498993963783" height="11" fill="#DA5B0B" rx="2.5"/>
+<rect x="412.35010060362174" y="50" width="17.64989939637827" height="11" fill="#563d7c" rx="2.5"/>
 </g>
 <g style="animation: slideUp 0.5s ease-out forwards; animation-delay: 100ms;">
 <text x="22" y="74" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="12" fill="#24292f">Python</text>
 <rect x="148" y="69" width="145" height="6" fill="none" stroke="#d0d7de" stroke-width="0.8" rx="2.5" opacity="0.3"/>
-<rect style="animation: scaleInBar 0.6s ease-out forwards; transform-origin: left; animation-delay: 160ms;" x="148" y="69" width="69.02000000000001" height="6" fill="#3572A5" rx="2.5"/>
-<text x="301" y="74" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="11" fill="#6e7781" text-anchor="start">47.6%</text>
+<rect style="animation: scaleInBar 0.6s ease-out forwards; transform-origin: left; animation-delay: 160ms;" x="148" y="69" width="66.41" height="6" fill="#3572A5" rx="2.5"/>
+<text x="301" y="74" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="11" fill="#6e7781" text-anchor="start">45.8%</text>
 </g>
 <g style="animation: slideUp 0.5s ease-out forwards; animation-delay: 160ms;">
 <text x="22" y="90" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="12" fill="#24292f">TypeScript</text>
 <rect x="148" y="85" width="145" height="6" fill="none" stroke="#d0d7de" stroke-width="0.8" rx="2.5" opacity="0.3"/>
-<rect style="animation: scaleInBar 0.6s ease-out forwards; transform-origin: left; animation-delay: 220ms;" x="148" y="85" width="27.55" height="6" fill="#3178c6" rx="2.5"/>
-<text x="301" y="90" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="11" fill="#6e7781" text-anchor="start">19.0%</text>
+<rect style="animation: scaleInBar 0.6s ease-out forwards; transform-origin: left; animation-delay: 220ms;" x="148" y="85" width="26.39" height="6" fill="#3178c6" rx="2.5"/>
+<text x="301" y="90" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="11" fill="#6e7781" text-anchor="start">18.2%</text>
 </g>
 <g style="animation: slideUp 0.5s ease-out forwards; animation-delay: 220ms;">
 <text x="22" y="106" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="12" fill="#24292f">JavaScript</text>
 <rect x="148" y="101" width="145" height="6" fill="none" stroke="#d0d7de" stroke-width="0.8" rx="2.5" opacity="0.3"/>
-<rect style="animation: scaleInBar 0.6s ease-out forwards; transform-origin: left; animation-delay: 280ms;" x="148" y="101" width="21.75" height="6" fill="#f1e05a" rx="2.5"/>
-<text x="301" y="106" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="11" fill="#6e7781" text-anchor="start">15.0%</text>
+<rect style="animation: scaleInBar 0.6s ease-out forwards; transform-origin: left; animation-delay: 280ms;" x="148" y="101" width="21.605" height="6" fill="#f1e05a" rx="2.5"/>
+<text x="301" y="106" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="11" fill="#6e7781" text-anchor="start">14.9%</text>
 </g>
 <g style="animation: slideUp 0.5s ease-out forwards; animation-delay: 280ms;">
 <text x="22" y="122" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="12" fill="#24292f">HTML</text>
 <rect x="148" y="117" width="145" height="6" fill="none" stroke="#d0d7de" stroke-width="0.8" rx="2.5" opacity="0.3"/>
-<rect style="animation: scaleInBar 0.6s ease-out forwards; transform-origin: left; animation-delay: 340ms;" x="148" y="117" width="11.165" height="6" fill="#e34c26" rx="2.5"/>
-<text x="301" y="122" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="11" fill="#6e7781" text-anchor="start">7.7%</text>
+<rect style="animation: scaleInBar 0.6s ease-out forwards; transform-origin: left; animation-delay: 340ms;" x="148" y="117" width="15.660000000000002" height="6" fill="#e34c26" rx="2.5"/>
+<text x="301" y="122" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="11" fill="#6e7781" text-anchor="start">10.8%</text>
 </g>
 <g style="animation: slideUp 0.5s ease-out forwards; animation-delay: 340ms;">
 <text x="22" y="138" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="12" fill="#24292f">Jupyter Notebook</text>
 <rect x="148" y="133" width="145" height="6" fill="none" stroke="#d0d7de" stroke-width="0.8" rx="2.5" opacity="0.3"/>
-<rect style="animation: scaleInBar 0.6s ease-out forwards; transform-origin: left; animation-delay: 400ms;" x="148" y="133" width="8.12" height="6" fill="#DA5B0B" rx="2.5"/>
-<text x="301" y="138" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="11" fill="#6e7781" text-anchor="start">5.6%</text>
+<rect style="animation: scaleInBar 0.6s ease-out forwards; transform-origin: left; animation-delay: 400ms;" x="148" y="133" width="7.830000000000001" height="6" fill="#DA5B0B" rx="2.5"/>
+<text x="301" y="138" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="11" fill="#6e7781" text-anchor="start">5.4%</text>
 </g>
 <g style="animation: slideUp 0.5s ease-out forwards; animation-delay: 400ms;">
 <text x="22" y="154" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="12" fill="#24292f">CSS</text>
 <rect x="148" y="149" width="145" height="6" fill="none" stroke="#d0d7de" stroke-width="0.8" rx="2.5" opacity="0.3"/>
-<rect style="animation: scaleInBar 0.6s ease-out forwards; transform-origin: left; animation-delay: 460ms;" x="148" y="149" width="6.380000000000001" height="6" fill="#563d7c" rx="2.5"/>
-<text x="301" y="154" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="11" fill="#6e7781" text-anchor="start">4.4%</text>
+<rect style="animation: scaleInBar 0.6s ease-out forwards; transform-origin: left; animation-delay: 460ms;" x="148" y="149" width="6.234999999999999" height="6" fill="#563d7c" rx="2.5"/>
+<text x="301" y="154" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="11" fill="#6e7781" text-anchor="start">4.3%</text>
 </g>
 </svg>
