@@ -77,8 +77,8 @@
     <rect x="517.76" y="124" width="30.48" height="14" rx="4" fill="#16161e" stroke="#e0af68" stroke-width="1" opacity="0.7"/>
     <text x="533.0" y="134" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="9" font-weight="600" fill="#e0af68" text-anchor="middle">GOLD</text>
     <rect x="462.0" y="168" width="142.0" height="3" rx="1.5" fill="#16161e"/>
-    <rect x="462.0" y="168" width="34.08" height="3" rx="1.5" fill="#e0af68">
-      <animate attributeName="width" from="0" to="34.08" dur="0.9s" begin="0.66s" fill="backwards"/>
+    <rect x="462.0" y="168" width="35.5" height="3" rx="1.5" fill="#e0af68">
+      <animate attributeName="width" from="0" to="35.5" dur="0.9s" begin="0.66s" fill="backwards"/>
     </rect>
   </g>
   <g class="tile tile-4">
