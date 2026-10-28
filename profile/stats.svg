@@ -71,7 +71,7 @@
 <g style="animation: slideUp 0.5s ease-out forwards; animation-delay: 400ms;">
 <circle cx="28" cy="170" r="4" fill="#f7768e"/>
 <text x="40" y="174" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#c0caf5">Contributed To</text>
-<text style="animation: popIn 0.4s ease-out forwards; animation-delay: 460ms; transform-origin: right;" x="165" y="174" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="13" font-weight="700" fill="#7aa2f7" text-anchor="end">13</text>
+<text style="animation: popIn 0.4s ease-out forwards; animation-delay: 460ms; transform-origin: right;" x="165" y="174" font-family="'Cascadia Code', 'Fira Code', monospace" font-size="13" font-weight="700" fill="#7aa2f7" text-anchor="end">14</text>
 </g>
 <defs>
 <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
