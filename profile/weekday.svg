@@ -49,9 +49,9 @@
   <animate attributeName="y" from="165.0" to="71.37279596977329" dur="0.7s" begin="0.40s" fill="freeze"/>
 </rect>
 <text x="286.0" y="185" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle">S</text>
-<rect class="bar" style="animation-delay: 480ms" x="315.0" y="118.97984886649874" width="38" height="46.02015113350126" rx="3" fill="#7aa2f7">
-  <animate attributeName="height" from="0" to="46.02015113350126" dur="0.7s" begin="0.48s" fill="freeze"/>
-  <animate attributeName="y" from="165.0" to="118.97984886649874" dur="0.7s" begin="0.48s" fill="freeze"/>
+<rect class="bar" style="animation-delay: 480ms" x="315.0" y="117.12846347607052" width="38" height="47.87153652392947" rx="3" fill="#7aa2f7">
+  <animate attributeName="height" from="0" to="47.87153652392947" dur="0.7s" begin="0.48s" fill="freeze"/>
+  <animate attributeName="y" from="165.0" to="117.12846347607052" dur="0.7s" begin="0.48s" fill="freeze"/>
 </rect>
 <text x="334.0" y="185" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89" text-anchor="middle">S</text>
 <text x="22" y="200" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#565f89">Most active: </text>
