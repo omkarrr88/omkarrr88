@@ -28,9 +28,9 @@
   <animate attributeName="y" from="165.0" to="110.38387715930902" dur="0.7s" begin="0.08s" fill="freeze"/>
 </rect>
 <text x="94.0" y="185" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#6e7781" text-anchor="middle">T</text>
-<rect class="bar" style="animation-delay: 160ms" x="123.0" y="80.35508637236084" width="38" height="84.64491362763916" rx="3" fill="#3d59a1">
-  <animate attributeName="height" from="0" to="84.64491362763916" dur="0.7s" begin="0.16s" fill="freeze"/>
-  <animate attributeName="y" from="165.0" to="80.35508637236084" dur="0.7s" begin="0.16s" fill="freeze"/>
+<rect class="bar" style="animation-delay: 160ms" x="123.0" y="83.78119001919386" width="38" height="81.21880998080614" rx="3" fill="#3d59a1">
+  <animate attributeName="height" from="0" to="81.21880998080614" dur="0.7s" begin="0.16s" fill="freeze"/>
+  <animate attributeName="y" from="165.0" to="83.78119001919386" dur="0.7s" begin="0.16s" fill="freeze"/>
 </rect>
 <text x="142.0" y="185" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif" font-size="11" fill="#6e7781" text-anchor="middle">W</text>
 <rect class="bar" style="animation-delay: 240ms" x="171.0" y="91.8426103646833" width="38" height="73.1573896353167" rx="3" fill="#3d59a1">
